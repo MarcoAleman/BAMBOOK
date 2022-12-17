@@ -1,36 +1,27 @@
-<script setup>
-</script>
 <template>
-    <template>
-        <div class="d-flex lista align-items-center justify-content-center">
-            <div class="d-flex flex-wrap optionFooter align-items-center justify-content-center">
-                <img class="iconF"  alt="">
-                <router-link style="text-decoration: none; color: var(--primario);" to="/">Home</router-link>
-            </div>
-            <div class="d-flex flex-wrap optionFooter align-items-center justify-content-center">
-                <img class="iconF"  alt="">
-                <router-link style="text-decoration: none; color: var(--primario);" to="/NewPost">New Post</router-link>
-            </div>
-            <div class="d-flex flex-wrap optionFooter align-items-center justify-content-center">
-                <img class="iconF"  alt="">
-                <router-link style="text-decoration: none; color: var(--primario); " to="/Perfil">Profile</router-link>
-            </div>
+    <div class="menuF d-flex align-items-center justify-content-center">
+        <div class="d-flex flex-wrap optionFooter align-items-center ">
+            <router-link to="/homePosts"><font-awesome-icon class="icon"  icon="fa-solid fa-house" /></router-link>
+            <router-link to="/createpost"><font-awesome-icon class="icon" icon="fa-solid fa-circle-plus" /></router-link>
+            <router-link to="/perfil"><font-awesome-icon class="icon" icon="fa-solid fa-user" /></router-link>
         </div>
-    </template>
+    </div>
 </template>
 <style scoped>
-
-.lista{
-    margin: auto;
-    height: 5rem;
-    background: var(--black);
-    width: 100%;
-    bottom: 0;
-    position:fixed;
-    display:none;
-}
-.optionFooter{
-    margin: auto;
-    width: 100%;
-}
+    .icon{
+        height: 1.5rem;
+        color: var(--primario);
+    }
+    .menuF{
+        height: 2.7rem;
+        width: 100%;
+        background-color: black;
+        bottom: 0;
+        position: fixed;
+    }
+    .optionFooter{
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+    }
 </style>

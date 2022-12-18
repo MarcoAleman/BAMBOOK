@@ -1,9 +1,8 @@
 <template>
 
 
-    <div class="p-2 mt-5" id="rules">
-      <div class="mt-3 p-2 d-flex flex-wrap justify-content-center align-item-center">
-        <img src="../img/imagen4.jpg" style="height: 150px; border-radius: 10%;" alt="">
+    <div class="p-2 " id="rules">
+      <div class=" p-2 d-flex flex-wrap justify-content-center ">
       </div>
       <div class="accordion " id="accordionPanelsStayOpenExample">
         <div class="accordion-item">

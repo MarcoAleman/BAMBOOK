@@ -1,13 +1,17 @@
 <script setup>
-
-
+import { loginWithGoogle, logout } from '../firebase/login';
+import user from '../store/users.js'
+ 
+const pruebas = () => {
+  console.log(user);
+}
 
 </script>
 
 <template>
 
   <main class="d-flex flex-column justify-content-center align-item-center p-2" id="contact">
-   
+
 
     <form class="d-flex justify-content-center border border-white rounded " style=" background-color: #a7c957;">
       <div class="d-flex flex-column justify-content-center align-item-center p-1">
@@ -15,8 +19,8 @@
         <div class="userCard">
           <div class="card " style="max-width: 540px;">
             <div class=" d-flex flex-column justify-content-center align-item-center">
-              <div class="  p-1 d-flex flex-column justify-content-center" >
-                <img  src="foto" class="img-fluid rounded-circle " style="height: 150px; width: 150px;" alt="user photo">
+              <div class="  p-1 d-flex flex-column justify-content-center">
+                <img src="foto" class="img-fluid rounded-circle " style="height: 150px; width: 150px;" alt="user photo">
               </div>
               <div class=" d-flex flex-column justify-content-center">
                 <div class="card-body d-flex flex-column justify-content-center align-item-center">
@@ -29,7 +33,7 @@
           </div>
         </div>
 
-        
+
 
         <div class="d-flex flex-column justify-content-center align-item-center p-1 ">
           <div class="hide-md-lg d-flex flex-wrap justify-content-center align-item-center ">
@@ -46,40 +50,46 @@
 
         </div>
 
-
-        <div class="d-flex flex-wrap justify-content-center align-item-center p-1 gap-1">
-          <button class="fb btn">
-            <i class="fa fa-facebook fa-fw"></i> Login with Facebook
-          </button>
-          <button class="twitter btn">
-            <i class="fa fa-twitter fa-fw"></i> Login with Twitter
-          </button>
-          <button class="google btn" >
-            <i class="fa fa-google fa-fw"></i> Login with Google+
-          </button>
-        </div>
-          <div class="d-flex flex-wrap justify-content-center align-item-center p-1 gap-1">
-          <button class="google btn" >
-            <i class="fa fa-google fa-fw"></i> Logout
-          </button>
-        </div>
-
-
       </div>
     </form>
 
+
+    <div class="d-flex flex-wrap justify-content-center align-item-center p-1 gap-1">
+      <button class="fb btn">
+        <p class="fa fa-facebook fa-fw"></p> Login with Facebook
+      </button>
+      <button class="twitter btn">
+        <p class="fa fa-twitter fa-fw"></p> Login with Twitter
+      </button>
+      <button class="google btn" @click="loginWithGoogle">Login with Google</button>
+    </div>
+    <div class="d-flex flex-wrap justify-content-center align-item-center p-1 gap-1">
+      <button class="google btn" @click="logout">Logout</button>
+    </div>
+
+    <button class="btn btn-danger" @click="pruebas">Prueba</button>
+
+    <!-- <p>Prueba</p>
+    <div v-if="user == null">
+      <p>Nada</p>
+    </div>
+    <div v-else>
+      <p>{{user.name }}</p>
+      <p>{{user.email }}</p>
+      <img :src=user.photo alt="fotoperfil">
+    </div> -->
 
 
     <div class="d-flex flex-wrap justify-content-center align-item-center p-1">
       <div>
         <a href="#" style="color:white" class="btn">Sign up
-            <!-- vemos -->
+          <!-- vemos -->
           <!-- <RouterLink to="/registro">Sign up</RouterLink> -->
         </a>
       </div>
       <div>
         <a href="#" style="color:white" class="btn">Forgot password
-            <!-- vemos
+          <!-- vemos
           <RouterLink to="/registro">Forgot password?</RouterLink> -->
         </a>
       </div>
@@ -114,5 +124,4 @@
   background-color: #dd4b39;
   color: white;
 }
-
 </style>

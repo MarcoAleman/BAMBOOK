@@ -3,7 +3,7 @@
         <div class="d-flex flex-wrap optionFooter align-items-center ">
             <router-link to="/homePosts"><font-awesome-icon class="icon"  icon="fa-solid fa-house" /></router-link>
             <router-link to="/createpost"><font-awesome-icon class="icon" icon="fa-solid fa-circle-plus" /></router-link>
-            <router-link to="/perfil"><font-awesome-icon class="icon" icon="fa-solid fa-user" /></router-link>
+            <router-link to="/Login"><font-awesome-icon class="icon" icon="fa-solid fa-user" /></router-link>
         </div>
     </div>
 </template>

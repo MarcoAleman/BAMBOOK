@@ -25,7 +25,7 @@ import FooterMenu from './components/FooterMenu.vue'
   <div class="offcanvas-body">
     <nav class="p-3 d-flex flex-column justify-content-center align-item-center gap-4">
 <RouterLink to="/">Home</RouterLink>
-<RouterLink to="/AboutUs">About</RouterLink>
+<RouterLink to="/AboutUs">About Us</RouterLink>
 <RouterLink to="/Events">Events</RouterLink>
 <RouterLink to="/Ventas">Marcketplace</RouterLink>
 <RouterLink to="/Donation">Donation</RouterLink>

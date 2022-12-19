@@ -16,11 +16,11 @@
           <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
             aria-labelledby="panelsStayOpen-headingOne">
             <div class="accordion-body">
-              <strong>TransITar </strong> is a vast communitie that is created, run, and populated by you: the TransITar
+              <strong>BambooK </strong> is a vast communitie that is created, run, and populated by you: the BambooK
               users. Through these communitie, you can post, comment, vote, discuss, learn, debate, support, and connect
-              with people who share your interest, and we encourage you to find or even create your home on TransITar.
-              Everyone on TransITar should have an expectation of privacy and safety, so please respect the privacy and
-              safety of others. TransITar and its communities are only what we make of them together, and can only exist
+              with people who share your interest, and we encourage you to find or even create your home on BambooK.
+              Everyone on BambooK should have an expectation of privacy and safety, so please respect the privacy and
+              safety of others. BambooK and its communities are only what we make of them together, and can only exist
               if we operate by a shared set of rules. We ask that you abide by not just the letter of these rules, but the
               spirit as well.
             </div>
@@ -37,8 +37,8 @@
           <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
             aria-labelledby="panelsStayOpen-headingTwo">
             <div class="accordion-body">
-              <strong>Remember.</strong>TransITar is a place for creating community and belonging, not for attacking
-              marginalized or vulnerable groups of people. Everyone has a right to use TransITar free of harassment,
+              <strong>Remember.</strong>BambooK is a place for creating community and belonging, not for attacking
+              marginalized or vulnerable groups of people. Everyone has a right to use BambooK free of harassment,
               bullying, and threats of violence. Post that incite violence or that promote hate based on identity or
               vulnerability will be banned.
             </div>
@@ -57,7 +57,7 @@
             <div class="accordion-body">
               <strong>Abide by community rules.</strong> Post authentic content into post where you have a personal
               interest, and do not cheat or engage in content manipulation (including spamming, vote manipulation, ban
-              evasion, or subscriber fraud) or otherwise interfere with or disrupt TransITar communitie.
+              evasion, or subscriber fraud) or otherwise interfere with or disrupt BambooK communitie.
             </div>
           </div>
         </div>
@@ -104,7 +104,7 @@
           <div id="panelsStayOpen-collapseSix" class="accordion-collapse collapse"
             aria-labelledby="panelsStayOpen-headingSix">
             <div class="accordion-body">
-              <strong>You don’t have to use your real name to use TransITar</strong> , but don’t impersonate an individual
+              <strong>You don’t have to use your real name to use BambooK</strong> , but don’t impersonate an individual
               or an entity in a misleading or deceptive manner.
             </div>
           </div>
@@ -137,7 +137,7 @@
           <div id="panelsStayOpen-collapseEight" class="accordion-collapse collapse"
             aria-labelledby="panelsStayOpen-collapseEight">
             <div class="accordion-body">
-              <strong>Dont break the site or do anything that interferes with normal use of TransITar.</strong>
+              <strong>Dont break the site or do anything that interferes with normal use of BambooK.</strong>
             </div>
           </div>
         </div>

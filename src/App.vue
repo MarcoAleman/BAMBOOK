@@ -44,7 +44,7 @@ import FooterMenu from './components/FooterMenu.vue'
           <button type="button" class="btn " data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions"
             aria-controls="offcanvasWithBothOptions"><font-awesome-icon class="icon" icon="fa-solid fa-bars" /></button>
           <div class="offcanvas offcanvas-start " data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions"
-            aria-labelledby="offcanvasWithBothOptionsLabel" style="width: 37vh; background-color: #a9def9;">
+            aria-labelledby="offcanvasWithBothOptionsLabel" style="width: 37vh; background-color: #a7c957;">
             <div class="offcanvas-header " style="width: 35vh;">
               <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">MENU</h5>
               <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -52,11 +52,11 @@ import FooterMenu from './components/FooterMenu.vue'
             <div class="offcanvas-body">
               <nav class="p-3 d-flex flex-column justify-content-center align-item-center gap-4">
                 <RouterLink to="/">Home</RouterLink>
-                <RouterLink to="/about">About</RouterLink>
-                <RouterLink to="/upcoming">Upcoming Events</RouterLink>
-                <RouterLink to="/work">Work with us</RouterLink>
-                <RouterLink to="/contact">Contact</RouterLink>
-                <RouterLink to="/rules">Rules y polices</RouterLink>
+                <RouterLink to="/Ventas">Marcketplace</RouterLink>
+                <RouterLink to="/AboutUs">About Us</RouterLink>
+                <RouterLink to="/Eventos">Events</RouterLink>
+                <RouterLink to="/Donation">Donation</RouterLink>
+                <RouterLink to="/RulesAndPolice">Rules and Polices</RouterLink>                
               </nav>
             </div>
           </div>

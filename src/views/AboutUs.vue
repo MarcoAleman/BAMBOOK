@@ -1,7 +1,7 @@
 <template>
 
 
-    <div class="p-2 " id="about">
+    <div class="p-2 mt-5" id="about">
       <div class=" d-flex flex-wrap justify-content-center align-item-center">
       </div>
       <div class="accordion " id="accordionPanelsStayOpenExample">

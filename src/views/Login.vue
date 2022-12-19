@@ -1,15 +1,20 @@
 <script setup>
 import { loginWithGoogle, logout } from '../firebase/login';
 import user from '../store/users.js'
- 
+import userList from '../store/userslist.js'
+import {getUsers} from '../firebase/users.js'
+import { onMounted } from 'vue';
+
+onMounted(() => getUsers())
+
 const pruebas = () => {
-  console.log(user);
+  console.log(userList.value);
 }
+
 
 </script>
 
 <template>
-
   <main class="d-flex flex-column justify-content-center align-item-center p-2" id="contact">
 
 
@@ -68,6 +73,8 @@ const pruebas = () => {
     </div>
 
     <button class="btn btn-danger" @click="pruebas">Prueba</button>
+
+
 
     <!-- <p>Prueba</p>
     <div v-if="user == null">

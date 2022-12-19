@@ -1,6 +1,8 @@
 import { app } from "./index.js";
 import { getAuth, signInWithPopup, GoogleAuthProvider, signOut } from "firebase/auth";
 import user from "../store/users.js";
+import { addUser } from "./users.js";
+
 
 const provider = new GoogleAuthProvider();
 const auth = getAuth(app)
@@ -15,6 +17,7 @@ const loginWithGoogle = () => {
         photo: result.user.photoURL,
     }
     user.value.push(NewUser)
+    addUser(NewUser)
   }).catch((error) => {
     console.log(error);
   });

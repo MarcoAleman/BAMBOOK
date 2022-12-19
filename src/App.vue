@@ -6,62 +6,106 @@ import FooterMenu from './components/FooterMenu.vue'
 
 <template>
 
-
-
-  <div class="d-flex align-items-center mx-3" style="height: 3rem;">
-    <img class="logo" src="#" alt="">
-    <h1 class="mt-2">BambooK</h1>
-    <div class="m-auto iconos">
-      <font-awesome-icon class="icon" icon="fa-solid fa-store" />
-      <font-awesome-icon class="icon" icon="fa-solid fa-inbox" />
-
-      <!-- Menu hamburguesa -->
-      <button class="btn " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><font-awesome-icon class="icon" icon="fa-solid fa-bars" /></button>
-<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-  <div class="offcanvas-header">
-    <h5 class="offcanvas-title" id="offcanvasRightLabel">Offcanvas right</h5>
-    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-  </div>
-  <div class="offcanvas-body">
-    <nav class="p-3 d-flex flex-column justify-content-center align-item-center gap-4">
-<RouterLink to="/">Home</RouterLink>
-<RouterLink to="/AboutUs">About Us</RouterLink>
-<RouterLink to="/Events">Events</RouterLink>
-<RouterLink to="/Ventas">Marcketplace</RouterLink>
-<RouterLink to="/Donation">Donation</RouterLink>
-<RouterLink to="/RulesAndPolice">Rules and polices</RouterLink>
-</nav>
-  </div>
-</div>
-
+  <header>
+    <!-- Primer NAV -->
+    <div class="fixed-top p-1" style="background-color: #ffffff;">
+      <div class="d-flex justify-content-between align-item-center ">
+        <div class="d-flex justify-content-center ">
+        <div class="p-1">
+          <img src="./img/logo.png" alt="LOGO" style="height: 30px;">
+        </div>
+        <div class="text-black d-flex">
+          <a class="link" href="">
+            <h1>B</h1>
+          </a>
+          <a class="link" href="">
+            <h1>a</h1>
+          </a>
+          <a class="link" href="">
+            <h1>m</h1>
+          </a>
+          <a class="link" href="">
+            <h1>b</h1>
+          </a>
+          <a class="link" href="">
+            <h1>o</h1>
+          </a>
+          <a class="link" href="">
+            <h1>o</h1>
+          </a>
+          <a class="link" href="">
+            <h1>K</h1>
+          </a>
+        </div>
+        </div>
+        <div class="d-flex justify-content-center ">
+          <font-awesome-icon class="icon" icon="fa-solid fa-store" />
+          <font-awesome-icon class="icon" icon="fa-solid fa-inbox" />
+          <button type="button" class="btn " data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions"
+            aria-controls="offcanvasWithBothOptions"><font-awesome-icon class="icon" icon="fa-solid fa-bars" /></button>
+          <div class="offcanvas offcanvas-start " data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions"
+            aria-labelledby="offcanvasWithBothOptionsLabel" style="width: 37vh; background-color: #a9def9;">
+            <div class="offcanvas-header " style="width: 35vh;">
+              <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">MENU</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <nav class="p-3 d-flex flex-column justify-content-center align-item-center gap-4">
+                <RouterLink to="/">Home</RouterLink>
+                <RouterLink to="/about">About</RouterLink>
+                <RouterLink to="/upcoming">Upcoming Events</RouterLink>
+                <RouterLink to="/work">Work with us</RouterLink>
+                <RouterLink to="/contact">Contact</RouterLink>
+                <RouterLink to="/rules">Rules y polices</RouterLink>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-    <footer>
-      <FooterMenu />
-    </footer>
+
+
+  </header>
+  <footer>
+    <FooterMenu />
+  </footer>
   <RouterView />
 </template>
 
 <style scoped>
-  .logo{
-    width: 2rem;
-    height: 2rem;
-    background-color: var(--primario);
-    border-radius: 50%;
-  }
-  .iconos{
-    margin-left: 4rem !important;
-  }
-  .icon{
-    height: 1.3rem;
-    color: var(--primario);
-    margin-left: 1rem;
-    margin-right: 0;
+.logo {
+  width: 2rem;
+  height: 2rem;
+  background-color: var(--primario);
+  border-radius: 50%;
 }
-  h1{
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: var(--primario);
-    margin-left: .6rem;
-  }
+
+.iconos {
+  margin-left: 4rem !important;
+}
+
+.icon {
+  height: 1.3rem;
+  color: var(--primario);
+  margin-left: 1rem;
+  margin-right: 0;
+}
+
+h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--primario);
+  margin-left: .6rem;
+}
+
+.link {
+  text-decoration: none;
+  -webkit-transition: 1s ease;
+}
+
+.link:hover {
+  text-decoration: none;
+  -webkit-transform: scale(1.5);
+
+}
 </style>

@@ -46,7 +46,7 @@ import FooterMenu from './components/FooterMenu.vue'
           <div class="offcanvas offcanvas-start " data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions"
             aria-labelledby="offcanvasWithBothOptionsLabel" style="width: 37vh; background-color: #a7c957;">
             <div class="offcanvas-header " style="width: 35vh;">
-              <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">MENU</h5>
+              <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Usuario</h5>
               <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
             <div class="offcanvas-body">

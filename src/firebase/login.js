@@ -2,6 +2,7 @@ import { app } from "./index.js";
 import { getAuth, signInWithPopup, GoogleAuthProvider, signOut } from "firebase/auth";
 import user from "../store/users.js";
 import { addUser } from "./users.js";
+import userList from "../store/userslist.js";
 
 
 const provider = new GoogleAuthProvider();
@@ -17,7 +18,9 @@ const loginWithGoogle = () => {
         photo: result.user.photoURL,
     }
     user.value.push(NewUser)
-    addUser(NewUser)
+    if (NewUser.email !== userList.value.forEach(user => includes(user.email))) {
+        addUser(NewUser)
+    } 
   }).catch((error) => {
     console.log(error);
   });

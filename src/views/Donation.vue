@@ -17,7 +17,6 @@ window.onclick = function (event) {
                     <form
                         class="d-flex flex-column justify-content-center align-item-center  border border-white rounded p-2 "
                         style="background-color: #afc957;">
-
                         <div>
                             <div class="d-flex flex-column justify-content-center align-item-center mt-2 p-1 gap-1">
                                 <h3>Certificate delivery address</h3>

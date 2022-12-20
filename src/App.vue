@@ -106,6 +106,5 @@ h1 {
 .link:hover {
   text-decoration: none;
   -webkit-transform: scale(1.5);
-
 }
 </style>

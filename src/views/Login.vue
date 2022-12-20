@@ -2,7 +2,7 @@
 import { loginWithGoogle, logout } from '../firebase/login';
 import user from '../store/users.js'
 import userList from '../store/userslist.js'
-import {getUsers} from '../firebase/users.js'
+import { getUsers } from '../firebase/users.js'
 import { onMounted } from 'vue';
 
 onMounted(() => getUsers())
@@ -30,8 +30,9 @@ const pruebas = () => {
               <div class=" d-flex flex-column justify-content-center">
                 <div class="card-body d-flex flex-column justify-content-center align-item-center">
                   <h1>WELCOME!</h1>
-                  <h2 class="card-title ">Nombre</h2>
-                  <p class="card-text"><small class="text-muted">Email</small></p>
+                  <img :src="user.photo" alt="">
+                  <h2 class="card-title ">{{user.name}}</h2>
+                  <p class="card-text"><small class="text-muted">{{user.email}}</small></p>
                 </div>
               </div>
             </div>

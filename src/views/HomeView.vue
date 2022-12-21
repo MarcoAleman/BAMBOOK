@@ -1,8 +1,10 @@
 <script setup>
 </script>
 <template>
-<main>
-    <div class="d-flex flex-wrap justify-content-center align-item-center p-5">
+  <main>
+    <div class="d-flex flex-wrap">
+      <div class="d-flex flex-column">
+        <div class="d-flex flex-wrap justify-content-center align-item-center p-5">
           <a class="link" href="">B</a>
           <a class="link" href="">a</a>
           <a class="link" href="">m</a>
@@ -12,41 +14,46 @@
           <a class="link" href="">K</a>
         </div>
         <div class="mt-2  " id="bienvenidos">
-        <h4> <strong> Bienvenidos</strong> a nuestra red social mundial, destinada a la conexión exclusiva para ciudadanos, gobernantes, empresas o instituciones ecologistas.</h4>
-   </div>
-        <div class="d-flex flex-wrap justify-content-center align-item-center p-1 gap-1">
+          <h4> <strong> Bienvenidos</strong> a nuestra red social mundial, destinada a la conexión exclusiva para
+            ciudadanos, gobernantes, empresas o instituciones ecologistas.</h4>
+        </div>
+      </div>
+      <div class="d-flex flex-column">
+        <div class="d-flex flex-column justify-content-center align-item-center p-1 gap-1">
           <button class="fb btn">
             <i class="fa fa-facebook fa-fw"></i> Login with Facebook
           </button>
           <button class="twitter btn">
             <i class="fa fa-twitter fa-fw"></i> Login with Twitter
           </button>
-          <button class="google btn" >
+          <button class="google btn">
             <i class="fa fa-google fa-fw"></i> Login with Google+
           </button>
         </div>
-          <div class="d-flex flex-wrap justify-content-center align-item-center p-1 gap-1">
-          <button class="google btn" >
+        <div class="d-flex flex-wrap justify-content-center align-item-center p-1 gap-1">
+          <button class="google btn">
             <i class="fa fa-google fa-fw"></i> Logout
           </button>
         </div>
+      </div>
 
-    
-   <div>
+      <div>
 
-   </div>
+      </div>
+    </div>
 
-</main>
+  </main>
 
 </template>
 <style scoped>
 #bienvenidos {
-text-shadow: 1px 1px 1px #afc957;
-display: flex;
-flex-wrap: wrap;
-text-align: center;
+  text-shadow: 1px 1px 1px #afc957;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
 
 }
+
 .link {
   text-decoration: none;
   -webkit-transition: 1s ease;

@@ -13,13 +13,13 @@
           <a class="link" href="">o</a>
           <a class="link" href="">K</a>
         </div>
-        <div class="mt-2  " id="bienvenidos">
+        <div class="p-3" id="bienvenidos">
           <h4> <strong> Bienvenidos</strong> a nuestra red social mundial, destinada a la conexión exclusiva para
             ciudadanos, gobernantes, empresas o instituciones ecologistas.</h4>
         </div>
       </div>
-      <div class="d-flex flex-column">
-        <div class="d-flex flex-column justify-content-center align-item-center p-1 gap-1">
+      <div class="d-flex m-auto">
+        <div v-if="!user" class="d-flex flex-column justify-content-center align-item-center p-1 gap-1">
           <button class="fb btn">
             <i class="fa fa-facebook fa-fw"></i> Login with Facebook
           </button>
@@ -30,7 +30,7 @@
             <i class="fa fa-google fa-fw"></i> Login with Google+
           </button>
         </div>
-        <div class="d-flex flex-wrap justify-content-center align-item-center p-1 gap-1">
+        <div v-if="user" class="d-flex flex-wrap justify-content-center align-item-center p-1 gap-1">
           <button class="google btn">
             <i class="fa fa-google fa-fw"></i> Logout
           </button>
@@ -46,6 +46,7 @@
 
 </template>
 <style scoped>
+
 #bienvenidos {
   text-shadow: 1px 1px 1px #afc957;
   display: flex;
@@ -68,12 +69,24 @@
 }
 
 .fb {
-  background-color: #3B5998;
+  background-color: #3B5998 ;
+  color: white;
+}
+.fb:hover {
+  -webkit-transform: scale(1.1);
+  transition: .2s;
+  background-color: #3B5998 ;
   color: white;
 }
 
 .twitter {
-  background-color: #55ACEE;
+  background-color: #55ACEE !important;
+  color: white !important;
+}
+.twitter:hover {
+  -webkit-transform: scale(1.1);
+  transition: .2s;
+  background-color: #55ACEE ;
   color: white;
 }
 
@@ -81,4 +94,16 @@
   background-color: #dd4b39;
   color: white;
 }
+.google:hover{
+  -webkit-transform: scale(1.1);
+  transition: .2s;
+  background-color: #dd4b39;
+  color: white;
+}
+button{
+  margin-top: 2rem;
+  width: 17rem;
+  height: 3rem;
+}
+
 </style>

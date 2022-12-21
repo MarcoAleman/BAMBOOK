@@ -1,5 +1,5 @@
 import { ref } from "vue"; 
 
-const user = ref([])
+const user = ref(null)
 
 export default user

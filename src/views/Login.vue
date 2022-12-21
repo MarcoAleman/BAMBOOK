@@ -5,11 +5,13 @@ import userList from '../store/userslist.js'
 import { getUsers } from '../firebase/users.js'
 import { onMounted } from 'vue';
 
+
 onMounted(() => getUsers())
 
 const pruebas = () => {
   console.log(userList.value);
 }
+
 
 
 </script>
@@ -28,9 +30,9 @@ const pruebas = () => {
                 <img src="foto" class="img-fluid rounded-circle " style="height: 150px; width: 150px;" alt="user photo">
               </div>
               <div class=" d-flex flex-column justify-content-center">
-                <div class="card-body d-flex flex-column justify-content-center align-item-center">
+                <div v-if="user !== null" class="card-body d-flex flex-column justify-content-center align-item-center">
                   <h1>WELCOME!</h1>
-                  <img :src="user.photo" alt="">
+                  <img :src=user.photo alt="">
                   <h2 class="card-title ">{{user.name}}</h2>
                   <p class="card-text"><small class="text-muted">{{user.email}}</small></p>
                 </div>

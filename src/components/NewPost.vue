@@ -19,9 +19,9 @@
     const addNewPost = () => {
         let newPost = {
             id: crypto.randomUUID(),
-            name: name.value,
+            name: user.value.name,
             date: Date.now(),
-            email: email.value,
+            email: user.value.name,
             message: message.value,
             photo: user.value.photoURL,
         }

@@ -21,9 +21,9 @@
             id: crypto.randomUUID(),
             name: user.value.name,
             date: Date.now(),
-            email: user.value.name,
+            email: user.value.email,
             message: message.value,
-            photo: user.value.photoURL,
+            photo: user.value.photo,
         }
         addPost(newPost)
         message.value = ''

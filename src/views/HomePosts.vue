@@ -1,19 +1,21 @@
 <script setup>
-    import Posts from '../components/Posts.vue'
-    import posts from '../store/PostStore.js'
+    import Post from '../components/Post.vue'
+    import posts from '../store/postStore'
     import { getPosts } from '../firebase/posts.js'
     import { getComments } from '../firebase/comments.js'
     import { onMounted } from 'vue'
 
 onMounted(() => {
     getPosts()
-    getComments()
+    // getComments()
 })
 </script>
 
 <template>
-    <h1 class="text-center text-white">Post Recientes</h1>
-    <Posts v-for="post in posts" :post="post" :key="post.id"  />
+    <div>
+    <h1 class="text-center text-dark">Post Recientes</h1>
+    <Post v-for="post in posts" :post="post" :key="post.id"  />
+    </div>
 </template>
 
 <style scoped>

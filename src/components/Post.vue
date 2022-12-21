@@ -7,6 +7,7 @@
         post: {},
         typeof: Object
     })
+    
 </script>
 <template>
     <div class="postContenedor">

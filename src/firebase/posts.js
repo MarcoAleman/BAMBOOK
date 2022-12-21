@@ -12,7 +12,7 @@ const getPosts = () =>{
     onSnapshot(postRef, (snapshot) =>{
         posts.value = []
         snapshot.forEach(doc => {
-            let newPost = {
+            let post = {
                 id: doc.id,
                 date: doc.data().date,
                 name: doc.data().name,
@@ -21,8 +21,8 @@ const getPosts = () =>{
                 photo: doc.data().photo,
             }
             console.log('no se que soy', posts);
-            console.log('SOY EL NUEVO POST', newPost);
-            posts.value.push(newPost)
+            console.log('SOY EL NUEVO POST', post);
+            posts.value.push(post)
         })
     })
 }

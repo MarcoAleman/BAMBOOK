@@ -2,32 +2,36 @@
 </script>
 <template>
 <main>
-    <div class="col-4 d-flex">
-          <a class="link" href="">
-           B
-          </a>
-          <a class="link" href="">
-            a
-          </a>
-          <a class="link" href="">
-        m
-          </a>
-          <a class="link" href="">
-            b
-          </a>
-          <a class="link" href="">
-            o
-          </a>
-          <a class="link" href="">
-            o
-          </a>
-          <a class="link" href="">
-            K
-          </a>
+    <div class="d-flex flex-wrap justify-content-center align-item-center p-5">
+          <a class="link" href="">B</a>
+          <a class="link" href="">a</a>
+          <a class="link" href="">m</a>
+          <a class="link" href="">b</a>
+          <a class="link" href="">o</a>
+          <a class="link" href="">o</a>
+          <a class="link" href="">K</a>
         </div>
-    <div class="mt-5 " id="bienvenidos">
+        <div class="mt-2  " id="bienvenidos">
         <h4> <strong> Bienvenidos</strong> a nuestra red social mundial, destinada a la conexión exclusiva para ciudadanos, gobernantes, empresas o instituciones ecologistas.</h4>
    </div>
+        <div class="d-flex flex-wrap justify-content-center align-item-center p-1 gap-1">
+          <button class="fb btn">
+            <i class="fa fa-facebook fa-fw"></i> Login with Facebook
+          </button>
+          <button class="twitter btn">
+            <i class="fa fa-twitter fa-fw"></i> Login with Twitter
+          </button>
+          <button class="google btn" >
+            <i class="fa fa-google fa-fw"></i> Login with Google+
+          </button>
+        </div>
+          <div class="d-flex flex-wrap justify-content-center align-item-center p-1 gap-1">
+          <button class="google btn" >
+            <i class="fa fa-google fa-fw"></i> Logout
+          </button>
+        </div>
+
+    
    <div>
 
    </div>
@@ -37,7 +41,11 @@
 </template>
 <style scoped>
 #bienvenidos {
-/* text-shadow: 1px 1px 1px red; */
+text-shadow: 1px 1px 1px #afc957;
+display: flex;
+flex-wrap: wrap;
+text-align: center;
+
 }
 .link {
   text-decoration: none;
@@ -52,4 +60,18 @@
   -webkit-transform: scale(1.5);
 }
 
+.fb {
+  background-color: #3B5998;
+  color: white;
+}
+
+.twitter {
+  background-color: #55ACEE;
+  color: white;
+}
+
+.google {
+  background-color: #dd4b39;
+  color: white;
+}
 </style>

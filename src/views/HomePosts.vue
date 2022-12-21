@@ -12,6 +12,9 @@ onMounted(() => {
 </script>
 
 <template>
+ 
+
+
     <div>
         <!-- acá poner login  -->
     </div>

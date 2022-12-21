@@ -9,25 +9,25 @@
         <img src="../assets/img/logo.png" alt="LOGO" class="col-3">
         <div class="col-4 d-flex">
           <a class="link" href="">
-            <h1>B</h1>
+            B
           </a>
           <a class="link" href="">
-            <h1>a</h1>
+            a
           </a>
           <a class="link" href="">
-            <h1>m</h1>
+            m
           </a>
           <a class="link" href="">
             <h1>b</h1>
           </a>
           <a class="link" href="">
-            <h1>o</h1>
+            o
           </a>
           <a class="link" href="">
-            <h1>o</h1>
+          o
           </a>
           <a class="link" href="">
-            <h1>K</h1>
+            K
           </a>
         </div>
       </div>
@@ -82,15 +82,16 @@
 }
 
 h1 {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: var(--primario);
+  
   /* margin-left: .6rem; */
 }
 
 .link {
   text-decoration: none;
   -webkit-transition: 1s ease;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--primario);
 }
 
 .link:hover {

@@ -12,6 +12,12 @@ onMounted(() => {
 </script>
 
 <template>
+ 
+
+
+    <div>
+        <!-- acá poner login  -->
+    </div>
     <div>
     <h1 class="text-center text-dark">Post Recientes</h1>
     <Post v-for="post in posts" :post="post" :key="post.id"  />

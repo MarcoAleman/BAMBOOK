@@ -1,13 +1,22 @@
 <script setup>
     import NewComment from './NewComment.vue'
-    import CommentContainer from './CommentContainer.vue'
+    // import CommentContainer from './CommentContainer.vue'
     import user from '../store/users.js' 
+    import CommentPostVue from './CommentPost.vue';
+    import commentStore from '../store/commentStore.js'
+    import { onMounted } from 'vue';
+import { getComments } from '../firebase/comments';
     
+    onMounted (() => {getComments})
+
     const props = defineProps({
         post: {},
         typeof: Object
     })
     
+    const pruebas = () => {
+        console.log(commentStore.value)
+    }
 </script>
 <template>
     <div class="postContenedor">
@@ -24,9 +33,10 @@
             <font-awesome-icon class="share" icon="fa-solid fa-message-middle" />
             <!-- <span class="text-white text-sm">{{post.comments.length}}</span -->
         </div>
-        <CommentContainer  :postId="post.id"/>
-        <NewComment v-if="user" :postId="post.id"/>
-    </div>    
+        <button @click="pruebas" >Prueba</button>
+        <CommentPostVue v-for="comment in commentStore" :comment="comment" :key="comment.id" />
+        <!-- <CommentContainer  :postId="post.id"/> -->
+        <NewComment v-if="user" :postId="post.id"/>  </div>    
 </template>
 <style scoped>
     .nomUser{

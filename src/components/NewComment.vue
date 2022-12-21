@@ -3,7 +3,7 @@
     import { addComment } from '../firebase/comments.js' 
     import { ref } from 'vue'
 
-    const text = ref([])
+    const text = ref('')
 
     const props = defineProps({
         postId: '',
@@ -15,10 +15,10 @@
             id: crypto.randomUUID(),
             postId: props.postId,
             date: Date.now(),
-            name: user.value.displayName,
+            name: user.value.name,
             email: user.value.email,
             text: text.value,
-            photo: user.value.photoURL,
+            photo: user.value.photo,
         }
         addComment(newComment)
         text.value = ''

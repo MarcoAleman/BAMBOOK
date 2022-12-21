@@ -5,9 +5,9 @@ const db = getFirestore(app)
 const commentRef = collection(db, 'comments')
 
 const addComment = (comment) => {
-    addDoc(commentRef, comment)
-    
+    addDoc(commentRef, comment) 
 }
+
 const getComments = () =>{
     onSnapshot(commentRef, (snapshot) =>{
         comments.value = []
@@ -21,6 +21,7 @@ const getComments = () =>{
                 text: doc.data().text,
                 photo: doc.data().photo,
             }
+            console.log(newComment)
             comments.value.push(newComment)
         })
     })

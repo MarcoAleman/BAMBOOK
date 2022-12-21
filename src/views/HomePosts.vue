@@ -7,7 +7,7 @@
 
 onMounted(() => {
     getPosts()
-    // getComments()
+    getComments()
 })
 </script>
 

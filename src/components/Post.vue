@@ -15,7 +15,7 @@ import { getComments } from '../firebase/comments';
     })
     
     const pruebas = () => {
-        console.log(commentStore.value)
+        console.log(commentStore)
     }
 </script>
 <template>
@@ -34,7 +34,7 @@ import { getComments } from '../firebase/comments';
             <!-- <span class="text-white text-sm">{{post.share.length}}</span -->
         </div>
         <button @click="pruebas" >Prueba</button>
-        <CommentPostVue v-for="comment in commentStore" :comment="comment" :key="comment.id" />
+        <!-- <CommentPostVue v-for="comment in commentStore" :comment="comment" :key="comment.id" /> -->
         <!-- <CommentContainer  :postId="post.id"/> -->
         <NewComment v-if="user" :postId="post.id"/>  </div>    
 </template>

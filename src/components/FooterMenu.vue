@@ -4,6 +4,7 @@
             <router-link to="/HomePosts"><font-awesome-icon class="icon"  icon="fa-solid fa-house" /></router-link>
             <router-link to="/CreatePost"><font-awesome-icon class="icon" icon="fa-solid fa-circle-plus" /></router-link>
             <router-link to="/Login"><font-awesome-icon class="icon" icon="fa-solid fa-user" /></router-link>
+            <router-link to="/Perfil">...</router-link>
         </div>
     </div>
 </template>
@@ -16,8 +17,6 @@
         height: 2.7rem;
         width: 100%;
         background-color: black;
-        bottom: 0;
-        position: fixed;
     }
     .optionFooter{
         display: flex;

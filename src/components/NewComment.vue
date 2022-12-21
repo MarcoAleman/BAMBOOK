@@ -39,17 +39,17 @@
     border-radius: 50%;
     width: 2.5rem;
     height: 2.5rem;
-    color: white;
-    background-color: var(--terciario);
+    color: black;
+    background-color: var(--primario);
     border: none;
 }
 .comentarios{
     display: flex;
 }
-::placeholder{color: white; text-align: center; opacity: 70%;}
+::placeholder{ color: black; text-align: center; opacity: 70%;}
 input{
     border: none;
-    background-color: var(--terciario);
+    background-color: var(--primario);
     border-radius: 15px;
     width: 75%;
     

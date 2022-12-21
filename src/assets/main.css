@@ -3,6 +3,7 @@
 :root{
   --primario: #A7c957;
   --negro: black;
+  --background: #F3F2EF;
 }
 
 *{
@@ -10,4 +11,7 @@
   margin: 0;
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
+}
+body{
+  background-color: var(--background) !important;
 }

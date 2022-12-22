@@ -1,10 +1,10 @@
 <template>
 
 
-    <div class="p-2 mt-5" id="about">
-      <div class=" d-flex flex-wrap justify-content-center align-item-center">
-      </div>
-      <div class="accordion " id="accordionPanelsStayOpenExample">
+    <div class="p-2 d-flex flex-column justify-content-center align-item-center" id="about">
+      <img class="img1 " src="../assets/img/2020-06-05-día-mundial-del-medio-ambiente-jpg.jpg" alt="">
+    
+      <div class="accordion p-2" id="accordionPanelsStayOpenExample">
         <div class="accordion-item">
           <h2 class="accordion-header" id="panelsStayOpen-headingOne">
             <button class="accordion-button" style="background-color: #a7c957;" type="button" data-bs-toggle="collapse"
@@ -60,12 +60,13 @@
   
   <style>
   #about {
-    min-height: 100vh;
-  
-    background-size: cover;
-    background-position: center;
-  
-  
+    min-height: 100vh;  
+   
+  }
+  .img1 {
+    min-height: 100px;
+border-radius: 1rem;
+
   }
   </style>
   

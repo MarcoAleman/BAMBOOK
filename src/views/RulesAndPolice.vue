@@ -1,16 +1,15 @@
 <template>
 
 
-    <div class="p-2 mt-5" id="rules">
-      <div class=" p-2 d-flex flex-wrap justify-content-center ">
-      </div>
+    <div class="p-2 d-flex flex-column justify-content-center align-item-center" id="rules">
+      <img class="img1" src="../assets/img/pasted-image-0.png" alt="">
       <div class="accordion " id="accordionPanelsStayOpenExample">
         <div class="accordion-item">
           <h2 class="accordion-header" id="panelsStayOpen-headingOne">
             <button class="accordion-button" style="background-color: #a7c957;" type="button" data-bs-toggle="collapse"
               data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="false"
               aria-controls="panelsStayOpen-collapseOne">
-              Transit Content Policy
+            BambooK Content Policy
             </button>
           </h2>
           <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
@@ -155,6 +154,11 @@
     background-position: center;
   
   
+  }
+  .img1 {
+    min-height: 100px;
+border-radius: 1rem;
+
   }
   </style>
     

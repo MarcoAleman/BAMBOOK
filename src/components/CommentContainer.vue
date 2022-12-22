@@ -2,12 +2,12 @@
 import { ref, computed, onMounted } from 'vue'
 import CommentPost from '../components/CommentPost.vue'
 import comments from '../store/commentStore.js'
+
 const commentsWithId = ref([])
 
 const props = defineProps({
-    comments: [],
-    postId: 0,
-    typeOf: Number,
+    postId: "",
+    typeOf: String,
 })
 
 const waitComment = computed(() => {

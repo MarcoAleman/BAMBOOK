@@ -4,7 +4,7 @@ const props = defineProps({
     typeof: Object
 })
 
-const emmits = defineEmits
+//const emmits = defineEmits
 /* const addItem = (product) => {
     if (!this.cart.includes(event)) {
         this.cart.push(event)

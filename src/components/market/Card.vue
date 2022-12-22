@@ -4,7 +4,8 @@ const props = defineProps({
     typeof: Object
 })
 
-const addItem = (product) => {
+const emmits = defineEmits
+/* const addItem = (product) => {
     if (!this.cart.includes(event)) {
         this.cart.push(event)
         this.cart[this.cart.length - 1].unit = 1
@@ -24,7 +25,7 @@ const deleteItem = (product) => {
 const deleteCart = () => {
     this.cart.length = 0;
     localStorage.setItem('Cart', JSON.stringify(this.cart));
-}
+} */
 </script>
 <template>
     <!-- <div class="card" style="width: 18rem;">

@@ -1,8 +1,10 @@
 <script setup>
-import { onMounted } from 'vue';
+import { ref, onMounted } from 'vue';
 import Card from './Card.vue';
 import products from '../../store/productsStore';
 import { getProducts} from '../../firebase/products';
+
+const cart =ref([]);
 
 onMounted(() => {
     getProducts()

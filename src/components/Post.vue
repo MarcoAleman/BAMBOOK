@@ -25,7 +25,7 @@
                 <font-awesome-icon class="share" icon="fa-solid fa-share" />
             <!-- <span class="text-white text-sm">{{post.share.length}}</span -->
         </div>
-        <button @click="deletePost(post.id)">...</button>
+        <button @click="deletePost(post.id, post.email)">...</button>
         <NewComment v-if="user" :postId="post.id"/>
         <CommentContainer  :postId="post.id"/>
     </div>    

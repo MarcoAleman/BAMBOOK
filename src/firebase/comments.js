@@ -1,6 +1,7 @@
 import { app } from './index.js'
 import { getFirestore, addDoc, collection, onSnapshot, deleteDoc, doc} from 'firebase/firestore'
 import  comments  from '../store/commentStore'
+import user from '../store/users.js'
 const db = getFirestore(app)
 const commentRef = collection(db, "comments")
 
@@ -26,8 +27,10 @@ const getComments = () =>{
     })
 }
 
-const deleteComment = (id) => {
-    deleteDoc(doc(commentRef, id))
+const deleteComment = (id, email) => {
+    if (user !== null && user.value.email == email){
+        deleteDoc(doc(commentRef, id))
+    }
 }
 
 

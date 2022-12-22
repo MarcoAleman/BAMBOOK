@@ -1,6 +1,7 @@
 import { app } from './index.js'
 import { getFirestore, addDoc, collection, onSnapshot, deleteDoc, doc} from 'firebase/firestore'
 import  posts  from '../store/postStore.js'
+import user from '../store/users.js'
 
 const db = getFirestore(app)
 const postRef = collection(db, "posts")
@@ -27,8 +28,10 @@ const getPosts = () =>{
     })
 }
 
-const deletePost = (id) => {
-    deleteDoc(doc(postRef, id))
+const deletePost = (id, email) => {
+    if (user !== null && user.value.email == email){
+        deleteDoc(doc(postRef, id))
+    }
 }
 
 export { getPosts, addPost, deletePost }

@@ -13,7 +13,7 @@ import { deleteComment } from '../firebase/comments';
             <h3 class="nomUser ">{{comment.name}}</h3>
         </div>
         <p class="post p-2">{{comment.text}}</p>
-        <button @click="deleteComment(comment.id)">...</button>
+        <button @click="deleteComment(comment.id, comment.email)">...</button>
     </div>
 </template>
 <style scoped>

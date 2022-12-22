@@ -1,0 +1,75 @@
+<script setup>
+let cart = []
+</script>
+
+<template>
+    <div class="icon-cart" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+        <!-- <img src="./assets/img/cart-icon.svg" alt="icon-cart"> -->
+        <font-awesome-icon icon="fas fa-cart-shopping" />
+        <div v-cloak class="counter-cart">{{ cart.length || 0 }}</div>
+    </div>
+
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Cart</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div v-if="cart.length != 0" class="modal-body">
+                    <div v-for="product in cart" class="row d-flex flex-row justify-content-between align-items-center">
+                        <p class="col-5">{{ product.name }}</p>
+                        <p class="col-5">Price: ${{ product.price }}</p>
+                        <p class="col-1">x {{ product.unit }}</p>
+                        <p class="col-1 btn btn-danger text-center" @click="deleteItem(product)">X</p>
+                    </div>
+                    <p class="text-center">Total: ${{ cart.reduce((acc, prod) => acc + prod.unit * prod.price, 0) }}</p>
+                </div>
+                <div v-else class="modal-body text-center">
+                    <p>Cart is empty!!!</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" @click="deleteCart">Empty Cart</button>
+                    <button type="button" class="btn btn-success">Buy</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+
+<style scoped>
+.icon-cart {
+    width: 5rem;
+    height: 5rem;
+    background-color: white;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 25px;
+    left: 25px;
+    cursor: pointer;
+    box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075)inset, 0 0 8px black;
+}
+
+.icon-cart .fa-cart-shopping {
+    width: 50%;
+    font-size: 2rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.icon-cart div {
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    background-color: greenyellow;
+    border-radius: 50%;
+    padding: 0.5rem;
+}
+</style>

@@ -27,4 +27,8 @@ const getPosts = () =>{
     })
 }
 
-export { getPosts, addPost }
+const deletePost = (id) => {
+    deleteDoc(doc(postRef, id))
+}
+
+export { getPosts, addPost, deletePost }

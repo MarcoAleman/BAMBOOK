@@ -26,4 +26,9 @@ const getComments = () =>{
     })
 }
 
-export { getComments, addComment }
+const deleteComment = (id) => {
+    deleteDoc(doc(commentRef, id))
+}
+
+
+export { getComments, addComment, deleteComment }

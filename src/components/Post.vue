@@ -2,15 +2,13 @@
     import NewComment from './NewComment.vue'
     import CommentContainer from './CommentContainer.vue'
     import user from '../store/users.js' 
+    import { deletePost } from '../firebase/posts';
     
     const props = defineProps({
         post: {},
         typeof: Object
     })
     
-    const pruebas = () => {
-        console.log(commentStore.value)
-    }
 </script>
 <template>
     <div class="postContenedor mx-3">
@@ -27,7 +25,7 @@
                 <font-awesome-icon class="share" icon="fa-solid fa-share" />
             <!-- <span class="text-white text-sm">{{post.share.length}}</span -->
         </div>
-        <button @click="pruebas" >Prueba</button>
+        <button @click="deletePost(post.id)">...</button>
         <NewComment v-if="user" :postId="post.id"/>
         <CommentContainer  :postId="post.id"/>
     </div>    

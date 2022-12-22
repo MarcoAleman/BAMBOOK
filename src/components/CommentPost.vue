@@ -1,4 +1,5 @@
 <script setup>
+import { deleteComment } from '../firebase/comments';
     const props = defineProps({
         comment: {},
         typeof: Object,
@@ -12,6 +13,7 @@
             <h3 class="nomUser ">{{comment.name}}</h3>
         </div>
         <p class="post p-2">{{comment.text}}</p>
+        <button @click="deleteComment(comment.id)">...</button>
     </div>
 </template>
 <style scoped>

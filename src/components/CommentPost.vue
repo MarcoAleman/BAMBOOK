@@ -9,7 +9,7 @@ import { deleteComment } from '../firebase/comments';
 <template>
     <div class="postContenedor mx-3">
         <div class="nomYimg d-flex">
-            <img class="imgPerfil" :src="comment.photo? comment.photo : 'https://media.istockphoto.com/id/1332100919/vector/man-icon-black-icon-person-symbol.jpg?s=612x612&w=0&k=20&c=AVVJkvxQQCuBhawHrUhDRTCeNQ3Jgt0K1tXjJsFy1eg='" />
+            <img class="imgPerfil" referrerpolicy="no-referrer" :src="comment.photo? comment.photo : 'https://media.istockphoto.com/id/1332100919/vector/man-icon-black-icon-person-symbol.jpg?s=612x612&w=0&k=20&c=AVVJkvxQQCuBhawHrUhDRTCeNQ3Jgt0K1tXjJsFy1eg='" />
             <h3 class="nomUser ">{{comment.name}}</h3>
         </div>
         <p class="post p-2">{{comment.text}}</p>

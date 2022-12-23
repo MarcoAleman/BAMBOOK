@@ -24,13 +24,13 @@ const getUsers = () => {
     {
         userList.value = []
         snapshot.forEach(doc => {
-            const user = {
+            const userL = {
                 id: doc.id,
                 name: doc.data().name,
                 email: doc.data().email,
                 photo: doc.data().photo
             }
-        userList.value.push(user)
+        userList.value.push(userL)
         })
     })
 
@@ -39,4 +39,4 @@ const getUsers = () => {
 
 
 
-export {addUser, deleteUser, getUsers}
+export {addUser, deleteUser, getUsers, userRef}

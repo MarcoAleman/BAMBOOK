@@ -32,7 +32,7 @@
         </div>
       </div>
       <div class="col-5 offset-2">
-        <font-awesome-icon class="icon col-2" icon="fa-solid fa-store" />
+        <router-link to="/market" ><font-awesome-icon  class="icon col-2" icon="fa-solid fa-store" /></router-link> 
         <font-awesome-icon class="icon col-2" icon="fa-solid fa-inbox" />
         <button class="btn col-2" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions"
           aria-controls="offcanvasWithBothOptions">...</button>
@@ -45,7 +45,7 @@
           <div class="offcanvas-body">
             <nav class="p-3 d-flex flex-column justify-content-center align-item-center gap-4">
               <RouterLink to="/">Home</RouterLink>
-              <RouterLink to="/Ventas">Marcketplace</RouterLink>
+              <RouterLink to="/market">Marcketplace</RouterLink>
               <RouterLink to="/AboutUs">About Us</RouterLink>
               <RouterLink to="/Eventos">Events</RouterLink>
               <RouterLink to="/Donation">Donation</RouterLink>
@@ -79,11 +79,6 @@
   color: var(--primario);
   margin-left: 1rem;
   margin-right: 0;
-}
-
-h1 {
-  
-  /* margin-left: .6rem; */
 }
 
 .link {

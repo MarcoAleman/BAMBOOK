@@ -8,7 +8,7 @@ import FooterMenu from './components/FooterMenu.vue'
 <template>
   <nave />
   <RouterView />
-  <FooterMenu class="sticky-bottom" />
+  <FooterMenu class="fixed-bottom" />
 </template>
 
 <style scoped>

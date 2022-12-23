@@ -27,19 +27,19 @@ const finalPrice = (price, discount) => {
         </div>
     </div> -->
 
-    <div class="">
+    <div class="d-flex justify-content-center">
         <section class="product-box">
             <!-- <a href="#"> -->
-                <div class="product-box_image d-flex justify-content-center">
-                    <img class="rounded-top" src="https://picsum.photos/200" :alt="product.name">
-                </div>
-                <article class="product-box_data">
-                    <h2>{{ finalPrice(product.price, product.discount) }}</h2>
-                    <span>{{ product.discount > 0 ? product.discount + ` % OFF` : '' }}</span>
-                    <p>{{ product.name }}</p>
-                    <font-awesome-icon class="icon p-1" icon="fas fa-truck" />
-                    <button class="btn btn-success" @click="emits('addItem', { product })">BUY</button>
-                </article>
+            <div class="product-box_image d-flex justify-content-center">
+                <img class="rounded-top" src="https://picsum.photos/200" :alt="product.name">
+            </div>
+            <article class="product-box_data">
+                <h2>{{ finalPrice(product.price, product.discount) }}</h2>
+                <span>{{ product.discount > 0 ? product.discount + ` % OFF` : '' }}</span>
+                <p class="text-center">{{ product.name }}</p>
+                <font-awesome-icon class="icon p-2" icon="fas fa-truck" />
+                <button class="btn btn-success w-100" @click="emits('addItem', { product })">BUY</button>
+            </article>
             <!-- </a> -->
         </section>
     </div>
@@ -48,11 +48,6 @@ const finalPrice = (price, discount) => {
 <style scoped>
 a {
     text-decoration: none;
-}
-
-.products-wrapper {
-    margin-top: 30px;
-    margin-bottom: 30px;
 }
 
 .products-title {
@@ -67,6 +62,7 @@ a {
     overflow: hidden;
     transition: 300ms;
     margin: 20px 0;
+    width: 90%;
     max-width: 320px;
 }
 
@@ -93,7 +89,7 @@ a {
 }
 
 .product-box_data span {
-    font-size: 1.5em;
+    font-size: 1.2em;
     font-weight: 300;
     color: green;
     margin: 0 0 0 10px;
@@ -111,7 +107,7 @@ a {
 
 .product-box_data .icon {
     color: green;
-    font-size: 1.8em;
+    font-size: 1.5em;
     width: 35px;
     height: 35px;
     text-align: center;
@@ -127,6 +123,10 @@ a {
     transition: 300ms;
 }
 
+
+
+/* MEDIA QUERYS */
+@media screen and (min-width: 768px) {
 .product-box:hover {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
@@ -139,5 +139,6 @@ a {
 .product-box:hover .icon {
     transform: rotate(360deg);
     box-shadow: 0 0 5px var(--green);
+}
 }
 </style>

@@ -16,7 +16,6 @@ const msjCarrito = ref({
 })
 
 const addItem = (product) => {
-    //if (!cart.value.includes(product.product)) {
     if (!cart.value.some(element => element.name == product.product.name)) {
         cart.value.push(product.product)
         cart.value[cart.value.length - 1].unit = 1
@@ -74,7 +73,7 @@ onMounted(() => {
 </script>
 
 <template>
-    <div class="card-ctn d-flex justify-content-center flex-wrap gap-2 mt-5">
+    <div class="card-ctn d-flex justify-content-center align-items-center flex-wrap gap-3 mb-5">
         <Card @addItem="addItem" v-for="product in products" :product="product" />
         <Card @addItem="addItem" v-for="product in products" :product="product" />
         <Card @addItem="addItem" v-for="product in products" :product="product" />
@@ -84,7 +83,7 @@ onMounted(() => {
     <CartComponent :cart="cart" @deleteItem="deleteItem" @deleteCart="deleteCart" />
 
     <div :class="[msjCarrito.clases.display, msjCarrito.clases.color]"
-        class="alert alert-success d-flex align-items-center justify-content-center w-50 fixed-bottom text-center " role="alert"
+        class="alert alert-success d-flex align-items-center justify-content-center w-50 fixed-bottom text-center mb-5" role="alert"
         id="mensaje-carrito" v-text="msjCarrito.msj"></div>
 </template>
 

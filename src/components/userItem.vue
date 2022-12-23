@@ -8,7 +8,7 @@ const props = defineProps({
 <template>
     <div class="container-fluid">
         <div class="row">
-            <img class="col-3 imgPerfil" :src=userL.photo />
+            <img class="col-3 imgPerfil" :src=userL.photo  referrerpolicy="no-referrer"/>
             <p class="col-3 text-dark">{{ userL.name }}</p>
             <button class="col-3 btn btn-success">Profile</button>
             <button class="col-3 btn btn-danger">Menssage</button>

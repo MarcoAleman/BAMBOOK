@@ -1,11 +1,14 @@
 <script setup>
-import { ref } from 'vue';
-let cart = []
+const props = defineProps({
+    cart: {},
+    typeof: Object
+})
+
+const emits = defineEmits(['deleteItem', 'deleteCart'])
 </script>
 
 <template>
     <div class="icon-cart" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-        <!-- <img src="./assets/img/cart-icon.svg" alt="icon-cart"> -->
         <font-awesome-icon icon="fas fa-cart-shopping" />
         <div v-cloak class="counter-cart">{{ cart.length || 0 }}</div>
     </div>
@@ -23,7 +26,7 @@ let cart = []
                         <p class="col-5">{{ product.name }}</p>
                         <p class="col-5">Price: ${{ product.price }}</p>
                         <p class="col-1">x {{ product.unit }}</p>
-                        <p class="col-1 btn btn-danger text-center" @click="deleteItem(product)">X</p>
+                        <p class="col-1 btn btn-danger text-center" @click="emits('deleteItem', { product })" >X</p>
                     </div>
                     <p class="text-center">Total: ${{ cart.reduce((acc, prod) => acc + prod.unit * prod.price, 0) }}</p>
                 </div>
@@ -31,7 +34,7 @@ let cart = []
                     <p>Cart is empty!!!</p>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-danger" @click="deleteCart">Empty Cart</button>
+                    <button type="button" class="btn btn-danger" @click="emits('deleteCart')">Empty Cart</button>
                     <button type="button" class="btn btn-success">Buy</button>
                 </div>
             </div>

@@ -4,28 +4,17 @@ const props = defineProps({
     typeof: Object
 })
 
-//const emmits = defineEmits
-/* const addItem = (product) => {
-    if (!this.cart.includes(event)) {
-        this.cart.push(event)
-        this.cart[this.cart.length - 1].unit = 1
-    } else {
-        this.cart.map(prod => {
-            prod == event ? prod.unit += 1 : ''
-        })
-    }
-    console.log(this.cart);
-    localStorage.setItem('Cart', JSON.stringify(this.cart));
-}
+const emits = defineEmits(['addItem'])
 
-const deleteItem = (product) => {
-    this.cart = this.cart.filter(eventf => eventf != event);
-    localStorage.setItem('Cart', JSON.stringify(this.cart));
+const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+
+const finalPrice = (price, discount) => {
+    if (discount > 0) {
+        return toThousand(price - ((price * discount) / 100))
+    } else {
+        return toThousand(price)
+    }
 }
-const deleteCart = () => {
-    this.cart.length = 0;
-    localStorage.setItem('Cart', JSON.stringify(this.cart));
-} */
 </script>
 <template>
     <!-- <div class="card" style="width: 18rem;">
@@ -40,22 +29,18 @@ const deleteCart = () => {
 
     <div class="">
         <section class="product-box">
-            <a href="#">
+            <!-- <a href="#"> -->
                 <div class="product-box_image d-flex justify-content-center">
-                    <!-- <img src="/images/products/<%- product.image %>" alt="<%- product.name %>"> -->
-                    <img class="rounded-top" src="https://picsum.photos/200" alt="...">
+                    <img class="rounded-top" src="https://picsum.photos/200" :alt="product.name">
                 </div>
                 <article class="product-box_data">
-                    <!-- <h2><%- finalPrice(product.price, product.discount) %> </h2>
-                    <span><%- product.discount> 0 ? `${product.discount} % OFF` : "" %></span>
-                    <p><%- product.name %></p> -->
-                    <h2>{{ product.price }}</h2>
+                    <h2>{{ finalPrice(product.price, product.discount) }}</h2>
                     <span>{{ product.discount > 0 ? product.discount + ` % OFF` : '' }}</span>
                     <p>{{ product.name }}</p>
                     <font-awesome-icon class="icon p-1" icon="fas fa-truck" />
-                    <button class="btn btn-success">BUY</button>
+                    <button class="btn btn-success" @click="emits('addItem', { product })">BUY</button>
                 </article>
-            </a>
+            <!-- </a> -->
         </section>
     </div>
 </template>

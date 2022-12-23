@@ -2,7 +2,7 @@
 
 
     <div class="p-2 d-flex flex-column justify-content-center align-item-center" id="rules">
-      <img class="img1" src="../assets/img/pasted-image-0.png" alt="">
+      <img class="img1 p-2" src="../assets/img/pasted-image-0.png" alt="">
       <div class="accordion " id="accordionPanelsStayOpenExample">
         <div class="accordion-item">
           <h2 class="accordion-header" id="panelsStayOpen-headingOne">
@@ -150,9 +150,15 @@
   #rules {
     min-height: 100vh;
   
-    background-size: cover;
-    background-position: center;
+    background-color: #e5e5f7;
+/* opacity: 0.5; */
+background-image:  linear-gradient(135deg, #a7c957 25%, transparent 25%), linear-gradient(225deg, #a7c957 25%, transparent 25%), linear-gradient(45deg, #a7c957 25%, transparent 25%), linear-gradient(315deg, #a7c957 25%, #e5e5f7 25%);
+background-position:  8px 0, 8px 0, 0 0, 0 0;
+background-size: 8px 8px;
+background-repeat: repeat;
   
+  
+   
   
   }
   .img1 {

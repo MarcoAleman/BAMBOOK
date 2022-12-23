@@ -17,17 +17,7 @@ const finalPrice = (price, discount) => {
 }
 </script>
 <template>
-    <!-- <div class="card" style="width: 18rem;">
-        <img src="https://picsum.photos/200" class="card-img-top" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-    </div> -->
-
-    <div class="d-flex justify-content-center">
+    <!-- <div class="d-flex justify-content-center"> -->
         <section class="product-box">
             <!-- <a href="#"> -->
             <div class="product-box_image d-flex justify-content-center">
@@ -42,7 +32,7 @@ const finalPrice = (price, discount) => {
             </article>
             <!-- </a> -->
         </section>
-    </div>
+    <!-- </div> -->
 </template>
 
 <style scoped>
@@ -100,7 +90,7 @@ a {
     width: 100%;
     color: gray;
     margin: 0;
-    height: 0;
+    height: 40px;
     transition: 300ms;
     overflow: hidden;
 }
@@ -127,6 +117,9 @@ a {
 
 /* MEDIA QUERYS */
 @media screen and (min-width: 768px) {
+    .product-box_data p {
+        height: 0px;
+    }
 .product-box:hover {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }

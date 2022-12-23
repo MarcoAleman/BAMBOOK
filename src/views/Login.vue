@@ -27,12 +27,12 @@ const pruebas = () => {
           <div class="card " style="max-width: 540px;">
             <div class=" d-flex flex-column justify-content-center align-item-center">
               <div class="  p-1 d-flex flex-column justify-content-center">
-                <img src="foto" class="img-fluid rounded-circle " style="height: 150px; width: 150px;" alt="user photo">
+                <img src="https://picsum.photos/200" class="img-fluid rounded-circle " style="height: 150px; width: 150px;" alt="user photo">
               </div>
               <div class=" d-flex flex-column justify-content-center">
                 <div v-if="user !== null" class="card-body d-flex flex-column justify-content-center align-item-center">
                   <h1>WELCOME!</h1>
-                  <img :src=user.photo alt="">
+                  <img :src="user ? user.photoURL : 'https://picsum.photos/200'" alt="">
                   <h2 class="card-title ">{{user.name}}</h2>
                   <p class="card-text"><small class="text-muted">{{user.email}}</small></p>
                 </div>

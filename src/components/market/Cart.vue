@@ -23,10 +23,12 @@ const emits = defineEmits(['deleteItem', 'deleteCart'])
                 </div>
                 <div v-if="cart.length != 0" class="modal-body">
                     <div v-for="product in cart" class="row d-flex flex-row justify-content-between align-items-center">
-                        <p class="col-5">{{ product.name }}</p>
-                        <p class="col-5">Price: ${{ product.price }}</p>
-                        <p class="col-1">x {{ product.unit }}</p>
-                        <p class="col-1 btn btn-danger text-center" @click="emits('deleteItem', { product })" >X</p>
+                        <p class="col-5 p-0">{{ product.name }}</p>
+                        <p class="col-5 p-0">Price: ${{ product.price }}</p>
+                        <p class="col-1 p-0">x {{ product.unit }}</p>
+                        <p class="col-1 p-0 btn btn-danger text-center" @click="emits('deleteItem', { product })" >
+                            <font-awesome-icon icon="fa-solid fa-trash" />
+                        </p>
                     </div>
                     <p class="text-center">Total: ${{ cart.reduce((acc, prod) => acc + prod.unit * prod.price, 0) }}</p>
                 </div>
@@ -34,7 +36,7 @@ const emits = defineEmits(['deleteItem', 'deleteCart'])
                     <p>Cart is empty!!!</p>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-danger" @click="emits('deleteCart')">Empty Cart</button>
+                    <button type="button" class="btn btn-danger" @click="emits('deleteCart')">Empty Cart <font-awesome-icon icon="fa-solid fa-trash" /></button>
                     <button type="button" class="btn btn-success">Buy</button>
                 </div>
             </div>
@@ -49,10 +51,11 @@ const emits = defineEmits(['deleteItem', 'deleteCart'])
     background-color: white;
     border-radius: 50%;
     position: fixed;
-    bottom: 25px;
-    left: 25px;
+    bottom: 40px;
+    left: 20px;
     cursor: pointer;
     box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075)inset, 0 0 8px black;
+    z-index: 99999;
 }
 
 .icon-cart .fa-cart-shopping {

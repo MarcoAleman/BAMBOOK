@@ -35,6 +35,7 @@
         <router-link to="/market" ><font-awesome-icon  class="icon col-2" icon="fa-solid fa-store" /></router-link> 
         <font-awesome-icon class="icon col-2" icon="fa-solid fa-inbox" />
         <router-link to="Users">@</router-link>
+        <router-link to="UserView">@@@</router-link>
         <button class="btn col-2" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions"
           aria-controls="offcanvasWithBothOptions">...</button>
         <div class="offcanvas offcanvas-start " data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions"

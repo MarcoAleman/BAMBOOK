@@ -1,18 +1,24 @@
 <script setup>
     import Post from '../components/Post.vue'
-    import user from '../store/users.js'
+    // import user from '../store/users.js'
     import  posts  from '../store/postStore.js'
     import {  ref, computed } from 'vue'
-    import { onMounted } from 'vue'
-    import { getPosts } from '../firebase/posts'
-    import { getComments } from '../firebase/comments'
+    // import { onMounted } from 'vue'
+    // import { getPosts } from '../firebase/posts'
+    // import { getComments } from '../firebase/comments'
+// import { type } from 'os'
     const newUserName = 'No user Name'
     const myPosts = ref([])
     
-    onMounted(() => {
-        getPosts()
-        getComments()
+    const props = defineProps({
+        user: {},
+        typeof: Object
     })
+
+    // onMounted(() => {
+    //     getPosts()
+    //     getComments()
+    // })
 
     const updateMyPosts = computed(()=>{
     if(user.value){
@@ -31,7 +37,7 @@
         <h2 v-if="!user" class="text-center">Usted no tiene Posts. </h2>
         <p v-if="!user" class="text-center text-white">Cree una cuenta o Inicie Sesion</p>
         <div class="mt-2">
-        <Post v-for="post in myPosts" :key="post.id" :post="post" />
+        <!-- <Post v-for="post in myPosts" :key="post.id" :post="post" /> -->
         </div>
     </div>
 </template>

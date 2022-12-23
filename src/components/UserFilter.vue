@@ -1,22 +1,21 @@
 <script setup>
 import { ref, computed, onMounted } from 'vue'
-import CommentPost from '../components/CommentPost.vue'
-import comments from '../store/commentStore.js'
+import userItemVue from './userItem.vue';
+import userList from '../store/userslist'
+import { getUsers } from '../firebase/users';
+import mail from '../store/userMail'; 
 
-const commentsWithId = ref([])
+onMounted (() => getUsers())
 
-const props = defineProps({
-    postId: "",
-    typeOf: String,
+const usersWithemail = ref(null)
+
+
+const waitUser =  computed(() => {
+    usersWithemail.value = userList.value.filter(usuario => usuario.email == mail.value)
 })
-
-const waitComment = computed(() => {
-    commentsWithId.value = comments.value.filter(comment => comment.postId === props.postId)
-})
-
 
 </script>
 <template>
-    {{ waitComment }}
-    <CommentPost v-for="comment in commentsWithId" :comment="comment" :key="comment.id" />
+    {{ waitUser }}
+    <userItemVue v-for="user in usersWithemail" :userL="user" :key="user.id" />
 </template> 

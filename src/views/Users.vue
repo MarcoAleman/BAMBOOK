@@ -4,7 +4,7 @@ import userList from '../store/userslist';
 import { onMounted } from 'vue';
 import { getUsers } from '../firebase/users';
 
-onMounted(() => {getUsers()})
+onMounted(() => getUsers())
 
 </script>
 
@@ -17,7 +17,5 @@ onMounted(() => {getUsers()})
 </template>
 
 <style scoped>
-body {
-    min-height: 92vh;
-}
+
 </style>

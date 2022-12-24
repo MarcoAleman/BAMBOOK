@@ -21,8 +21,6 @@ const getPosts = () =>{
                 message: doc.data().message,
                 photo: doc.data().photo,
             }
-            console.log('no se que soy', posts);
-            console.log('SOY EL NUEVO POST', post);
             posts.value.push(post)
         })
     })

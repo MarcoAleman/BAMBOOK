@@ -36,7 +36,7 @@ const loginWithGoogle = async () => {
  
 
 const logout = () => {signOut(auth).then(() => {
-  user.value = []
+  user.value = null
 }).catch((error) => {
   console.log(error)
 });

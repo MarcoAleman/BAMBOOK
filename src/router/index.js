@@ -94,16 +94,16 @@ const router = createRouter({
       name: 'market',
       component: () => import('../views/MarketView.vue')
     },
-    /* {
+    {
       path: '/Users',
       name: 'Users',
       component: () => import('../views/Users.vue')
-    }, */
-    /* {
+    },
+    {
       path: '/UserView',
       name: 'UserView',
       component: () => import('../views/UserView.vue')
-    }, */
+    },
   ]
 })
 

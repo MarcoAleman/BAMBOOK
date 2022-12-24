@@ -1,6 +1,5 @@
 <script setup>
 import { ref, computed, onMounted } from 'vue'
-import userItemVue from './userItem.vue'
 import userList from '../store/userslist'
 import { getUsers } from '../firebase/users'
 import mail from '../store/userMail';

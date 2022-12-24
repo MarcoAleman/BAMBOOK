@@ -3,7 +3,5 @@ import UserFilterVue from '../components/UserFilter.vue';
 </script>
 
 <template>
-    <body>
-        <UserFilterVue />
-    </body>
+    <UserFilterVue />
 </template>

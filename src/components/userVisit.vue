@@ -1,5 +1,4 @@
 <script setup>
-    import Post from '../components/Post.vue'
     // import user from '../store/users.js'
     import  posts  from '../store/postStore.js'
     import {  ref, computed } from 'vue'

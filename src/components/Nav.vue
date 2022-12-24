@@ -1,5 +1,6 @@
 <script setup>
  import user from '../store/users.js'
+ import {logout} from '../firebase/login.js'
 </script>
 
 <template>
@@ -39,8 +40,8 @@
         <div class="offcanvas offcanvas-start " data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions"
           aria-labelledby="offcanvasWithBothOptionsLabel" style="width: 37vh; background-color: #a7c957;">
           <div class="offcanvas-header " style="width: 35vh;">
-            <img class="imgNav" :src=user.photo alt="">
-            <h5 class="offcanvas-title name"  id="offcanvasWithBothOptionsLabel">{{user.name}}</h5>
+            <img v-if="user" class="imgNav" :src=user.photo alt="">
+            <h5 v-if="user" class="offcanvas-title name"  id="offcanvasWithBothOptionsLabel">{{user.name}}</h5>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
           </div>
           <div class="offcanvas-body">
@@ -53,6 +54,10 @@
               <RouterLink to="/Donation">Donation</RouterLink>
               <RouterLink to="/RulesAndPolice">Rules and Polices</RouterLink>
             </nav>
+            <div class="d-flex align-items-center">
+
+              <button v-if="user" class="btn btn-danger" @click="logout">Logout</button>
+            </div>
           </div>
         </div>
       </div>

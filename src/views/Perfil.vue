@@ -18,6 +18,7 @@
     if(user.value){
         myPosts.value = posts.value.filter(element => element.email === user.value.email) 
     }
+    console.log(myPosts, 'post gabi');
 })
 </script>
 <template>
@@ -25,20 +26,23 @@
     <div class="perfil mt-3">
         <div class="nYf d-flex align-items-center justify-content-center gap-2 flex-column">
             <img :src="user? user.photo : 'https://media.istockphoto.com/id/1332100919/vector/man-icon-black-icon-person-symbol.jpg?s=612x612&w=0&k=20&c=AVVJkvxQQCuBhawHrUhDRTCeNQ3Jgt0K1tXjJsFy1eg='"  class="fotoPerfil d-flex justify-content-center align-items-center" />
-            <h2 class="fs-5 text-black">{{user? user.name : newUserName}}</h2>
-
-            <img :src="user? user.photoURL : 'https://media.istockphoto.com/id/1332100919/vector/man-icon-black-icon-person-symbol.jpg?s=612x612&w=0&k=20&c=AVVJkvxQQCuBhawHrUhDRTCeNQ3Jgt0K1tXjJsFy1eg='"  class="fotoPerfil d-flex justify-content-center align-items-center" />
-            <h2 class="fs-5 ">{{user? user.name : newUserName}}</h2>
+            <h2 class="fs-2 fw-bold text-black">{{user? user.name : newUserName}}</h2>
         </div>
-        <h2  v-if="user" class="text-center text-black fs-1 my-4">Tus Posts</h2>
-        <h2 v-if="!user" class="text-center">Usted no tiene Posts. </h2>
-        <p v-if="!user" class="text-center text-white">Cree una cuenta o Inicie Sesion</p>
+        <div class="text-center">
+            <h2  v-if="myPosts.length > 0" class="text-center text-black fs-1 my-4">Tus Posts</h2>
+            <h2 v-if="!user? !user : myPosts.length <= 0" class="text-center text-dark">Usted no tiene Posts. </h2>
+            <router-link  to="/CreatePost" v-if="myPosts.length <= 0" class="text-dark fs-3 fw-bold " style=" text-decoration: none; margin: auto;" >Cree uno ahora</router-link>
+            <p v-if="!user" class="text-center text-dark">Inicie Sesion con Google </p>
+        </div>
         <div class="mt-2">
         <Post v-for="post in myPosts" :key="post.id" :post="post" />
         </div>
     </div>
 </template>
 <style scoped>
+a{
+    text-align: center;
+}
     .perfil{
         margin: auto;
     }

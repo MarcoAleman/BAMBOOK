@@ -8,7 +8,7 @@ import user from '../store/users.js'
             <router-link to="/CreatePost" v-if="!user"><font-awesome-icon class="icon" icon="fa-solid fa-circle-plus" /></router-link>
             <router-link to="/CreatePost" v-if="user"><font-awesome-icon class="icon mt-1" icon="fa-solid fa-circle-plus" /></router-link>
             <router-link  to="/Perfil" v-if="!user"><font-awesome-icon class="icon" icon="fa-solid fa-user" /></router-link>
-            <router-link to="/Perfil" v-if="user"><img :src="user.photo" alt=""></router-link>
+            <router-link to="/Perfil" v-if="user"><img :src=user.photo alt=""></router-link>
         </div>
     </div>
 </template>

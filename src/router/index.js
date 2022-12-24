@@ -95,12 +95,12 @@ const router = createRouter({
       path: '/Users',
       name: 'Users',
       component: () => import('../views/Users.vue')
-    }/* ,
+    },
     {
       path: '/UserView',
       name: 'UserView',
       component: () => import('../views/UserView.vue')
-    }, */
+    }
   ]
 })
 

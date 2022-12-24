@@ -1,5 +1,5 @@
 <script setup>
-
+ import user from '../store/users.js'
 </script>
 
 <template>
@@ -8,25 +8,25 @@
       <div class="col-5 d-flex">
         <img src="../assets/img/logo.png" alt="LOGO" class="col-3">
         <div class="col-4 d-flex">
-          <a class="link" href="">
+          <a class="link" href="#">
             B
           </a>
-          <a class="link" href="">
+          <a class="link" href="#">
             a
           </a>
-          <a class="link" href="">
+          <a class="link" href="#">
             m
           </a>
-          <a class="link" href="">
+          <a class="link" href="#">
             <h1>b</h1>
           </a>
-          <a class="link" href="">
+          <a class="link" href="#">
             o
           </a>
-          <a class="link" href="">
+          <a class="link" href="#">
           o
           </a>
-          <a class="link" href="">
+          <a class="link" href="#">
             K
           </a>
         </div>
@@ -34,19 +34,19 @@
       <div class="col-5 offset-2">
         <router-link to="/market" ><font-awesome-icon  class="icon col-2" icon="fa-solid fa-store" /></router-link> 
         <font-awesome-icon class="icon col-2" icon="fa-solid fa-inbox" />
-        <router-link to="Users">@</router-link>
-        <router-link to="UserView">@@@</router-link>
         <button class="btn col-2" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions"
-          aria-controls="offcanvasWithBothOptions">...</button>
+          aria-controls="offcanvasWithBothOptions"><font-awesome-icon icon="fa-solid fa-bars" /></button>
         <div class="offcanvas offcanvas-start " data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions"
           aria-labelledby="offcanvasWithBothOptionsLabel" style="width: 37vh; background-color: #a7c957;">
           <div class="offcanvas-header " style="width: 35vh;">
-            <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Usuario</h5>
+            <img class="imgNav" :src=user.photo alt="">
+            <h5 class="offcanvas-title name"  id="offcanvasWithBothOptionsLabel">{{user.name}}</h5>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
           </div>
           <div class="offcanvas-body">
             <nav class="p-3 d-flex flex-column justify-content-center align-item-center gap-4">
-              <RouterLink to="/">Home</RouterLink>
+              <RouterLink to="/HomePosts">Home</RouterLink>
+              <RouterLink to="Users">Users</RouterLink>
               <RouterLink to="/market">Marcketplace</RouterLink>
               <RouterLink to="/AboutUs">About Us</RouterLink>
               <RouterLink to="/Eventos">Events</RouterLink>
@@ -61,6 +61,14 @@
 </template>
 
 <style scoped>
+.imgNav{
+  border-radius: 50%;
+  width: 4rem;
+  height: 4rem;
+}
+.name{
+  font-size: 1rem;
+}
 .header {
   height: 3vh !important;
 }

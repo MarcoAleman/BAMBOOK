@@ -2,13 +2,14 @@
 import { RouterLink, RouterView } from 'vue-router';
 import nave from './components/Nav.vue'
 import FooterMenu from './components/FooterMenu.vue'
+import user from './store/users.js'
 
 </script>
 
 <template>
-  <nave />
-  <RouterView />
-  <FooterMenu class="fixed-bottom" />
+    <nave v-if="user" />
+    <RouterView />
+    <FooterMenu />
 </template>
 
 <style scoped>

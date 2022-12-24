@@ -31,7 +31,7 @@
 </script>
 <template>
     {{updateData}}
-    <h1 class="text-center text-white">Crea tu post</h1>
+    <h1 class="text-center text-dark mt-3">Crea tu post</h1>
     <form>
         <div class="formulario m-auto">
             <div class="nYf d-flex align-items-center justify-content-center gap-2 flex-column">
@@ -42,7 +42,7 @@
             <div class="d-flex justify-content-center">
                 <button @click.prevent="addNewPost" class="text-align-center text-center mb-2">Postear</button>
             </div>
-            <label class=" text-center"><span class="text-center">Lea las reglas</span></label>
+            <label class="text-center"><span class="text-center">Lea las reglas</span></label>
         </div>
     </form>
 </template>
@@ -56,9 +56,9 @@
     button{
         border-radius: 10px;
         border: none;
-        color: white;
-        background-color: var(--terciario);
-        height: 1.3rem;
+        color: black;
+        background-color: var(--primario);
+        height: 3rem;
         font-weight: bold;
         font-size: .9rem;
         width: 10rem;

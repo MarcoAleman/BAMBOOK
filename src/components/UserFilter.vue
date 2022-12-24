@@ -9,6 +9,7 @@ import { getComments } from '../firebase/comments.js'
 import { getPosts } from '../firebase/posts.js'
 import posts from '../store/postStore'
 import Post from './Post.vue'
+import UserNameyFoto from './UserNameyFoto.vue';
 
 
 const userPosts = ref([])
@@ -29,13 +30,14 @@ const updateUserPosts = computed(()=>{
     }
 })
 
-
-console.log('componente post' , userPosts)
 </script>
 <template>
     {{ waitUser }}
     {{ updateUserPosts }}
-    <userItemVue v-for="user in usersWithemail" :userL="user" :key="user.id" />
+    <!-- <userItemVue v-for="user in usersWithemail" :userL="user" :key="user.id" />
+    -->
+    <UserNameyFoto v-for="user in usersWithemail" :key="user.id" :userL="user" />
+    <h3 v-if="userPosts.length > 0" class="text-center my-4">Sus ultimos Posts</h3>
+    <h3 v-if="userPosts.length <= 0" class="text-center my-4">Este Usuario no tiene Posts</h3>
     <Post v-for="post in userPosts" :key="post.id" :post="post" />
-    
 </template> 

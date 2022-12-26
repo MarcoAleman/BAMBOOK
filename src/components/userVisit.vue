@@ -32,9 +32,9 @@
             <img :src="user? user.photo : 'https://media.istockphoto.com/id/1332100919/vector/man-icon-black-icon-person-symbol.jpg?s=612x612&w=0&k=20&c=AVVJkvxQQCuBhawHrUhDRTCeNQ3Jgt0K1tXjJsFy1eg='"  class="fotoPerfil d-flex justify-content-center align-items-center" />
             <h2 class="fs-5 ">{{user? user.name : newUserName}}</h2>
         </div>
-        <h2  v-if="user" class="text-center text-white fs-1 my-4">Tus Posts</h2>
-        <h2 v-if="!user" class="text-center">Usted no tiene Posts. </h2>
-        <p v-if="!user" class="text-center text-white">Cree una cuenta o Inicie Sesion</p>
+        <h2  v-if="user" class="text-center text-white fs-1 my-4">Posts</h2>
+        <h2 v-if="!user" class="text-center">You have no Posts. </h2>
+        <p v-if="!user" class="text-center text-white">Create an account or Login</p>
         <div class="mt-2">
         <!-- <Post v-for="post in myPosts" :key="post.id" :post="post" /> -->
         </div>

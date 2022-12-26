@@ -9,7 +9,7 @@ import user from './store/users.js'
 <template>
     <nave v-if="user" />
     <RouterView />
-    <FooterMenu />
+    <FooterMenu v-if="user" />
 </template>
 
 <style scoped>

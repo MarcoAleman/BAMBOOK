@@ -31,7 +31,7 @@
 </script>
 <template>
     {{updateData}}
-    <h1 class="text-center text-dark mt-3">Crea tu post</h1>
+    <h1 class="text-center text-dark mt-3">Create your post</h1>
     <form>
         <div class="formulario m-auto p-2">
             <div class="nYf d-flex align-items-center justify-content-center gap-2 flex-column">

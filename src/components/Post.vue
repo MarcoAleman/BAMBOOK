@@ -34,12 +34,21 @@
             
         </div>
         <p class="post p-2">{{post.message}}</p>
-        <div class="botones d-flex">
-            <font-awesome-icon class="like" icon="fa-solid fa-heart" /> 
+        <div class= "d-flex align-items-center">
+            <div class="botones mx-2">
+                <font-awesome-icon class="like" icon="fa-solid fa-heart" /> 
+                <p class="p text-dark">2</p>
+            </div>
+            <div class="botones mx-2">
+                <font-awesome-icon class="comment" icon="fa-solid fa-comment" />
+                <p class="p text-dark">2</p>
+            </div>
             <!-- <span class="text-white text-sm">{{post.likes.length}}</span> -->
-            <font-awesome-icon class="comment" icon="fa-solid fa-comment" />
             <!-- <span class="text-white text-sm">{{post.comments.length}}</span -->
+            <div class="botones mx-2">
                 <font-awesome-icon class="share" icon="fa-solid fa-share" />
+                <p class="p text-dark">3</p>
+            </div>
             <!-- <span class="text-white text-sm">{{post.share.length}}</span -->
         </div>
         <NewComment :postId="post.id"/>
@@ -54,7 +63,14 @@
     }
     .botones{
         margin: auto;
-
+        background: var(--background);
+        width: 100%;
+        height: 2rem;
+        border-radius: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
     }
 
     img{
@@ -77,9 +93,12 @@
         border-bottom: 1px solid var(--primario);
     }
     .like, .share, .comment{
-        height: 1.5rem;
-        color: var(--primario);
-        width: 100%;
+        height: 1.3rem;
+        color: white;
+        padding: .4rem;
+    }
+    .p{
+        padding-top: 1rem;
     }
 
 </style>

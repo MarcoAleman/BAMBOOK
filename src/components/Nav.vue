@@ -7,7 +7,7 @@
   <header class="container-fluid border mt-1">
     <div class="row">
       <div class="col-5 d-flex">
-        <img src="../assets/img/logo.png" alt="LOGO" class="col-3">
+        <img src="../assets/img/logo.png" id="logo" alt="LOGO" class="col-3">
         <div class="col-4 d-flex">
           <a class="link" href="#">
             B
@@ -19,7 +19,7 @@
             m
           </a>
           <a class="link" href="#">
-            <h1>b</h1>
+            b
           </a>
           <a class="link" href="#">
             o
@@ -36,7 +36,7 @@
         <router-link to="/market" ><font-awesome-icon  class="icon col-2" icon="fa-solid fa-store" /></router-link> 
         <font-awesome-icon class="icon col-2" icon="fa-solid fa-inbox" />
         <button class="btn col-2" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions"
-          aria-controls="offcanvasWithBothOptions"><font-awesome-icon icon="fa-solid fa-bars" /></button>
+          aria-controls="offcanvasWithBothOptions" id="iconooffcanva"><font-awesome-icon icon="fa-solid fa-bars" /></button>
         <div class="offcanvas offcanvas-start " data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions"
           aria-labelledby="offcanvasWithBothOptionsLabel" style="width: 37vh; background-color: #a7c957;">
           <div class="offcanvas-header " style="width: 35vh;">
@@ -46,13 +46,13 @@
           </div>
           <div class="offcanvas-body">
             <nav class="p-3 d-flex flex-column justify-content-center align-item-center gap-4">
-              <RouterLink to="/HomePosts">Home</RouterLink>
-              <RouterLink to="Users">Users</RouterLink>
-              <RouterLink to="/market">Marcketplace</RouterLink>
-              <RouterLink to="/AboutUs">About Us</RouterLink>
-              <RouterLink to="/Eventos">Events</RouterLink>
-              <RouterLink to="/Donation">Donation</RouterLink>
-              <RouterLink to="/RulesAndPolice">Rules and Polices</RouterLink>
+              <RouterLink to="/HomePosts" id="offcanva">Home</RouterLink>
+              <RouterLink to="Users" id="offcanva">Users</RouterLink>
+              <RouterLink to="/market" id="offcanva">Marcketplace</RouterLink>
+              <RouterLink to="/AboutUs" id="offcanva">About Us</RouterLink>
+              <RouterLink to="/Eventos" id="offcanva">Events</RouterLink>
+              <RouterLink to="/Donation" id="offcanva">Donation</RouterLink>
+              <RouterLink to="/RulesAndPolice" id="offcanva">Rules and Polices</RouterLink>
             </nav>
             <div class="d-flex align-items-center">
 
@@ -107,6 +107,18 @@
 .link:hover {
   text-decoration: none;
   -webkit-transform: scale(1.5);
+}
+#logo {
+height: 40px;
+width: auto;
+}
+#offcanva {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+#iconooffcanva {
+  color: #a7c957;
 }
 </style>
 

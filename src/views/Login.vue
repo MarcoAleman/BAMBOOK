@@ -17,7 +17,7 @@ const pruebas = () => {
 </script>
 
 <template>
-  <main class="d-flex flex-column justify-content-center align-item-center p-2" id="contact">
+  <main  class="d-flex flex-column justify-content-center align-item-center p-2" id="contact">
 
 
     <form class="d-flex justify-content-center border border-white rounded " style=" background-color: #a7c957;">
@@ -109,12 +109,10 @@ const pruebas = () => {
 </template>
 <style scoped>
 #contact {
-
-
-  background-size: cover;
-  background-position: center;
-
-
+  background-color: #e5e5f7;
+opacity: 0.6;
+background: radial-gradient(circle, transparent 20%, #e5e5f7 20%, #e5e5f7 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #e5e5f7 20%, #e5e5f7 80%, transparent 80%, transparent) 25px 25px, linear-gradient(#a7c957 2px, transparent 2px) 0 -1px, linear-gradient(90deg, #a7c957 2px, #e5e5f7 2px) -1px 0;
+background-size: 50px 50px, 50px 50px, 25px 25px, 25px 25px;
 }
 
 
@@ -134,4 +132,6 @@ const pruebas = () => {
   background-color: #dd4b39;
   color: white;
 }
+
+
 </style>

@@ -63,7 +63,7 @@
   
   <style>
   #about {
-    min-height: 100vh;  
+    min-height: 83vh;  
     background-color: #e5e5f7;
 /* opacity: 0.5; */
 background-image:  linear-gradient(135deg, #a7c957 25%, transparent 25%), linear-gradient(225deg, #a7c957 25%, transparent 25%), linear-gradient(45deg, #a7c957 25%, transparent 25%), linear-gradient(315deg, #a7c957 25%, #e5e5f7 25%);

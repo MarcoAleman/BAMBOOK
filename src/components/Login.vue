@@ -17,8 +17,7 @@ import { loginWithGoogle, logout } from '../firebase/login.js';
           <a class="link" href="#">K</a>
         </div>
         <div class="p-3" id="bienvenidos">
-          <h4> <strong> Bienvenidos</strong> a nuestra red social mundial, destinada a la conexión exclusiva para
-            ciudadanos, gobernantes, empresas o instituciones ecologistas.</h4>
+          <h4> <strong> WELCOME</strong> to our global social network, intended for the exclusive connection for citizens, governments, companies or environmental institutions.</h4>
         </div>
       </div>
       <div class="d-flex m-auto">

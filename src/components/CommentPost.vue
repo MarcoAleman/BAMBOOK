@@ -17,7 +17,7 @@ import userMail from '../store/userMail.js'
                 <button class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                 </button>
                 <ul class="dropdown-menu ">
-                    <button style="width: 100%; height: 100%; border: none; color: white; backgroud: white;" class="text-dark bg-light" @click="deleteComment(comment.id, comment.email)">Borrar comentario</button>
+                    <button style="width: 100%; height: 100%; border: none; color: white; backgroud: white;" class="text-dark bg-light" @click="deleteComment(comment.id, comment.email)">Delete</button>
                 </ul>
             </div>
             <!-- fin -->

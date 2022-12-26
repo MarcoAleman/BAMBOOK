@@ -19,7 +19,7 @@ onMounted(() => {
             <Login  v-if="!user" />
         </div>
         <div v-if="user">
-        <h1 class="text-center text-dark my-4">Post Recientes</h1>
+        <h1 class="text-center text-dark my-4">Recent Posts</h1>
         <Post v-for="post in posts" :post="post" :key="post.id"  />
         </div>
     </main>

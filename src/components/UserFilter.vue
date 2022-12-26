@@ -36,7 +36,7 @@ const updateUserPosts = computed(()=>{
     <!-- <userItemVue v-for="user in usersWithemail" :userL="user" :key="user.id" />
     -->
     <UserNameyFoto v-for="user in usersWithemail" :key="user.id" :userL="user" />
-    <h3 v-if="userPosts.length > 0" class="text-center my-4">Sus ultimos Posts</h3>
-    <h3 v-if="userPosts.length <= 0" class="text-center my-4">Este Usuario no tiene Posts</h3>
+    <h3 v-if="userPosts.length > 0" class="text-center my-4">Latest Posts</h3>
+    <h3 v-if="userPosts.length <= 0" class="text-center my-4">This User has no Posts</h3>
     <Post v-for="post in userPosts" :key="post.id" :post="post" />
 </template> 

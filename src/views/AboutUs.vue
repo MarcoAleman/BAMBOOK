@@ -16,7 +16,7 @@
           <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
             aria-labelledby="panelsStayOpen-headingOne">
             <div class="accordion-body">
-              <strong>Somos una organizacion mundial</strong> que entiende que el todo es mas que la suma de las partes(Teoria de la Gestalt). Logramos una comunicacion entre la comunidad ecologista por medio de Bamboo una red social mundial.
+              <strong>We are a global organization</strong>that understands that the whole is greater than the sum of its parts (Gestalt Theory). We achieved communication among the environmental community through Bamboo, a global social network.
             </div>
           </div>
         </div>
@@ -31,11 +31,11 @@
           <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
             aria-labelledby="panelsStayOpen-headingTwo">
             <div class="accordion-body">
-              <strong>Bambook cuenta con varias secciones</strong> <ul>
-                <li>Un chat que permite la coneccion entre sus usuarios.</li>
-                <li>La seccion marcketplace hace posible las ventas de articulos realizados por reciclado.</li>
-                <li>Los posts hace posible el flujo de informacion, ideas y pensamientos entre sus usuarios.</li>
-                <li>Una seccion de eventos que brinda informacion de los dias y horarios en los que se llevan a cabo los mismos.</li>
+              <strong>BambooK has several sections</strong> <ul>
+                <li>A chat that allows the connection between its users.</li>
+                <li>The marketplace section makes it possible to sell items made by recycling.</li>
+                <li>Posts make it possible for the flow of information, ideas, and thoughts among your users.</li>
+                <li>A section of events that provides information on the days and times in which they take place.</li>
               </ul>
             </div>
           </div>
@@ -51,7 +51,7 @@
           <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse"
             aria-labelledby="panelsStayOpen-headingThree">
             <div class="accordion-body">
-              <strong>Our vision is</strong> incrementar la red de personas ecologistas para unir fuerzas por la lucha por un entorno sano. 
+              <strong>Our vision is</strong> Increase the network of environmentalists to join forces in the fight for a healthy environment.
             </div>
           </div>
         </div>

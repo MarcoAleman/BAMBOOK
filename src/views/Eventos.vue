@@ -13,8 +13,8 @@
           src="https://cdn.unenvironment.org/s3fs-public/inline-images/trash.jpg"
           class="card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title ">Limpieza en grupo</h5>
-          <p class="card-text">Vamos a salir a limpiar en grupo el dia 12/01/22 desde todas partes del mundo. </p>
+          <h5 class="card-title ">Group cleaning</h5>
+          <p class="card-text">We are going out to clean as a group on 01/12/22 from all over the world.</p>
           <div class="d-flex flex-wrap justify-content-center gap-1">
 
             <button type="button" class="btn btn-dark" id="link"><i class="bi bi-suit-heart"></i></button>
@@ -29,8 +29,8 @@
         <img src="https://eldia.com.do/wp-content/uploads/2019/10/20_Vida-Estilos_09_1p01.jpg?mrf-size=m" class="card-img"
           alt="...">
         <div class="card-body">
-          <h5 class="card-title">Jornada de Plantatón</h5>
-          <p class="card-text">Nos reunimos a realizar plantaciones en grupos desde todas partes del mundo.</p>
+          <h5 class="card-title">Planting Day</h5>
+          <p class="card-text">We come together to plant in groups from all over the world.</p>
           <div class="d-flex flex-wrap justify-content-center gap-1">
             <button type="button" class="btn btn-dark" id="link"><i class="bi bi-suit-heart"></i></button>
             <button type="button" class="btn btn-dark"><i class="bi bi-whatsapp"></i></button>
@@ -43,8 +43,8 @@
           src="https://conecta.tec.mx/sites/default/files/styles/header_full/public/2022-01/que-puedes-hacer-tu-para-cuidar-el-medio-ambiente.jpg?h=920929c4&itok=jLIvDkBu"
           class="card-img" alt="...">
         <div class="card-body">
-          <h5 class="card-title">Preservar el medio ambiente</h5>
-          <p class="card-text">Unete a nosotros en directo en zoom el 5/01/23 a 8:00hs </p>
+          <h5 class="card-title">Preserving the environment</h5>
+          <p class="card-text">Join us live on zoom on 01/5/23 at 8:00 a.m. </p>
           <div class="d-flex flex-wrap justify-content-center gap-1">
             <button type="button" class="btn btn-dark" id="link"><i class="bi bi-suit-heart"></i></button>
             <button type="button" class="btn btn-dark"><i class="bi bi-whatsapp"></i></button>
@@ -55,8 +55,8 @@
       <div class="card" style="width: 18rem;">
         <img src="https://t2.ev.ltmcdn.com/es/posts/5/0/7/actividades_para_cuidar_el_medio_ambiente_1705_orig.jpg" class="card-img" alt="...">
         <div class="card-body">
-          <h5 class="card-title">Aprender a reciclar</h5>
-          <p class="card-text">El planeta necesita tus cuidados. Aprende a reciclar en el vivo por zoom el dia 15/02/22 a 17hs</p>
+          <h5 class="card-title">Learn to recycle</h5>
+          <p class="card-text">The planet needs your care. Learn to recycle live by zoom on 02/15/22 at 5:00 p.m.</p>
           <div class="d-flex flex-wrap justify-content-center gap-1">
             <button type="button" class="btn btn-dark" id="link"><i class="bi bi-suit-heart"></i></button>
             <button type="button" class="btn btn-dark"><i class="bi bi-whatsapp"></i></button>

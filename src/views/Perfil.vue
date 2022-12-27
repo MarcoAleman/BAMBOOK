@@ -31,7 +31,7 @@
         <div class="text-center">
             <h2  v-if="myPosts.length > 0" class="text-center text-black fs-1 my-4">Posts</h2>
             <h2 v-if="!user? !user : myPosts.length <= 0" class="text-center text-dark">You have no Posts. </h2>
-            <router-link  to="/CreatePost" v-if="!user? user : myPosts.length <= 0 " class="text-dark fs-3 fw-bold " style=" text-decoration: none; margin: auto;" >Cree uno ahora</router-link>
+            <router-link  to="/CreatePost" v-if="!user? user : myPosts.length <= 0 " class="text-dark fs-3 fw-bold " style=" text-decoration: none; margin: auto;" >Create new post</router-link>
             <router-link to="/HomePosts" v-if="!user" class="text-center iniciarSesion fs-3 fw-medium">Sign in with Google</router-link>
         </div>
         <div class="mt-2">

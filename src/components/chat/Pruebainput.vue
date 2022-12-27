@@ -18,6 +18,7 @@ const newMessage = () => {
     let messageNew = {
         id: crypto.randomUUID(),
         user: user.value.name,
+        photo: user.value.photo,
         text: texto.value,
         dates: date
     }
@@ -27,17 +28,20 @@ const newMessage = () => {
 </script>
 
 <template>
-    <div>
+    <div class="container-fluid mb-5">
         <h1 class="text-center">Chat</h1>
-        <MensajesVue v-for="chat in chats" :chat="chat" key="chat.id" />
+        <div class="col-12 p-2 ">
+            <MensajesVue v-for="chat in chats" :chat="chat" key="chat.id" />
+        </div>
         <form class="mb-3 submit">
             <div class="d-flex">
                 <div class="col-9">
-                    <label for="textoprueba" class="form-label"></label>
                     <input type="text" v-model="texto" class="form-control" id="textoprueba"
                         placeholder="Ingrese su mensaje">
                 </div>
-                <button @click.prevent="newMessage" class="btn btn-success col-3">Enviar</button>
+                <div class="col-3">
+                    <button @click.prevent="newMessage" class="btn btn-success">Enviar</button>
+                </div>
             </div>
         </form>
     </div>
@@ -45,7 +49,7 @@ const newMessage = () => {
 
 <style scoped>
 .submit {
-    position: fixed;
-    bottom: 5vh;
+    /* position: sticky;
+    bottom: 10vh; */
 }
 </style>

@@ -23,6 +23,8 @@ import {
     getDocs
 } from "firebase/firestore"
 import { userRef } from './users.js'
+import { createAssignmentExpression } from '@vue/compiler-core'
+
 
 const ids = ref(null)
 const consulta12 = ref(null)
@@ -79,12 +81,20 @@ const getchats = (id) =>{
                 id: doc.id,
                 date: doc.data().dates,
                 name: doc.data().user,
+                photo: doc.data().photo,
                 message: doc.data().text,
             }
-            chats.value.unshift(chat)
+            chats.value.push(chat)
         })
-        console.log(chats.value);
-    })
-}
+        chats.value.sort((o1, o2) => {
+            if (o1.date < o2.date){
+                return -1;     
+            } else if (o1.date > o2.date ) {
+                return 1;
+            }
+        })
+            console.log(chats.value);
+        }
+    )}
 
 export {addMessage, getchats, addId}

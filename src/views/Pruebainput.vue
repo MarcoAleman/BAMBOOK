@@ -4,10 +4,15 @@ import PruebainputVue from '../components/chat/Pruebainput.vue';
 </script>
 
 <template>
-<PruebainputVue />
+    <div>
+        <PruebainputVue />
+    </div>
 
 </template>
 
 <style scoped>
-
+div {
+    min-height: 92vh !important;
+    height: auto;
+}
 </style>

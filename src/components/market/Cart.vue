@@ -52,7 +52,7 @@ const emits = defineEmits(['deleteItem', 'deleteCart'])
     border-radius: 50%;
     position: fixed;
     bottom: 40px;
-    left: 20px;
+    right: 20px;
     cursor: pointer;
     box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075)inset, 0 0 8px black;
     z-index: 99999;

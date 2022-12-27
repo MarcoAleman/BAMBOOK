@@ -21,7 +21,7 @@ const finalPrice = (price, discount) => {
         <section class="product-box">
             <!-- <a href="#"> -->
             <div class="product-box_image d-flex justify-content-center">
-                <img class="rounded-top" src="https://picsum.photos/200" :alt="product.name">
+                <img class="rounded-top" :src="product.photo ? product.photo :'https://picsum.photos/200'" :alt="product.name">
             </div>
             <article class="product-box_data">
                 <h2>{{ finalPrice(product.price, product.discount) }}</h2>
@@ -62,6 +62,12 @@ a {
 
 .product-box_image {
     border-bottom: 1px solid gainsboro;
+}
+
+.product-box_image img {
+    max-width: 100%;
+    height: 200px;
+    object-fit: contain;
 }
 
 .product-box_data {

@@ -48,7 +48,6 @@ const addItem = (product) => {
         })
 
     }
-    console.log(cart.value);
     localStorage.setItem('Cart', JSON.stringify(cart.value));
 }
 
@@ -64,7 +63,6 @@ const deleteCart = () => {
 
 onMounted(() => {
     if (localStorage.getItem('Cart')) {
-        console.log('fdsfs')
         cart.value = JSON.parse(localStorage.getItem('Cart'));
     }
     getProducts()
@@ -74,10 +72,6 @@ onMounted(() => {
 
 <template>
     <div class="card-ctn d-flex justify-content-center align-items-center flex-wrap gap-3 mb-5">
-        <Card @addItem="addItem" v-for="product in products" :product="product" />
-        <Card @addItem="addItem" v-for="product in products" :product="product" />
-        <Card @addItem="addItem" v-for="product in products" :product="product" />
-        <Card @addItem="addItem" v-for="product in products" :product="product" />
         <Card @addItem="addItem" v-for="product in products" :product="product" />
     </div>
     <CartComponent :cart="cart" @deleteItem="deleteItem" @deleteCart="deleteCart" />

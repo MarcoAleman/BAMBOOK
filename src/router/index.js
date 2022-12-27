@@ -87,9 +87,9 @@ const router = createRouter({
       component: () => import('../views/MarketView.vue')
     },
     {
-      path: '/addProduct',
+      path: '/addproduct',
       name: 'addProduct',
-      component: () => import('../views/MarketView.vue')
+      component: () => import('../views/AddProductView.vue')
     },
     {
       path: '/Users',

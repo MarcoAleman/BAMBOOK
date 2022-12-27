@@ -18,9 +18,10 @@ const loginWithGoogle = async () => {
             email: result.user.email,
             photo: result.user.photoURL,
         }
-      user.value = {
-        ...newUser
-    }
+        localStorage.setItem('user',JSON.stringify(newUser))
+        user.value = {
+            ...newUser
+        }
     let q = (query(userRef, where("email", "==", user.value.email)))
     const querySnapshot = await getDocs(q);
     querySnapshot.forEach((doc) => {
@@ -33,10 +34,11 @@ const loginWithGoogle = async () => {
     console.log(error);
   });
 }
- 
+
 
 const logout = () => {signOut(auth).then(() => {
   user.value = null
+  localStorage.setItem('user',null)
 }).catch((error) => {
   console.log(error)
 });

@@ -21,6 +21,8 @@ const getProducts = () => {
                 discount: doc.data().discount,
                 description: doc.data().description,
                 stock: doc.data().stock,
+                photo: doc.data().photo,
+                author: doc.data().author,
             }
 
             products.value.push(product);

@@ -10,7 +10,6 @@ import MensajesVue from './Mensajes.vue';
 let date = Date.now()
 
 const texto = ref('')
-const dato = ref(null)
 
 
 //carga mensaje

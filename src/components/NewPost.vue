@@ -42,7 +42,7 @@
             <div class="d-flex justify-content-center">
                 <button @click.prevent="addNewPost" class="text-align-center text-center mb-2">Post</button>
             </div>
-            <RouterLink to="/RulesAndPolice" id="offcanva">
+            <RouterLink to="/RulesAndPolice" class="text-center" id="offcanva">
 Read rules and policies</RouterLink>
         </div>
     </form>

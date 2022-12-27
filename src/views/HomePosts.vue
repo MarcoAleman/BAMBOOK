@@ -26,4 +26,7 @@ onMounted(() => {
 </template>
 
 <style scoped>
+    main{
+        padding-bottom: 2.7rem;
+    }
 </style>

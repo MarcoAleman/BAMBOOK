@@ -18,7 +18,7 @@ const emits = defineEmits(['deleteItem', 'deleteCart'])
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Cart</h1>
+                    <h1 class="modal-title fs-5 text-center" id="staticBackdropLabel">Cart</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div v-if="cart.length != 0" class="modal-body">
@@ -51,8 +51,8 @@ const emits = defineEmits(['deleteItem', 'deleteCart'])
     background-color: white;
     border-radius: 50%;
     position: fixed;
-    bottom: 40px;
-    right: 20px;
+    bottom: 48px;
+    right: 15px;
     cursor: pointer;
     box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075)inset, 0 0 8px black;
     z-index: 99999;
@@ -75,7 +75,7 @@ const emits = defineEmits(['deleteItem', 'deleteCart'])
     position: absolute;
     top: 10%;
     left: 50%;
-    background-color: greenyellow;
+    background-color: var(--primario);
     border-radius: 50%;
     padding: 0.5rem;
 }

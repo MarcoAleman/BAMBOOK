@@ -1,5 +1,7 @@
 <script setup>
 import { addId } from '../../firebase/addmsj';
+import user from '../../store/users';
+import mail from '../../store/userMail';
 
 const props = defineProps({
     chat: {},

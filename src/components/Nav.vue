@@ -37,7 +37,7 @@
         <font-awesome-icon class="icon col-2" icon="fa-solid fa-inbox" />
         <button class="btn col-2" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions"
           aria-controls="offcanvasWithBothOptions" id="iconooffcanva"><font-awesome-icon icon="fa-solid fa-bars" /></button>
-        <div class="offcanvas offcanvas-start " data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions"
+        <div class="offcanvas offcanvas-start " data-bs-scroll="false" tabindex="-1" id="offcanvasWithBothOptions"
           aria-labelledby="offcanvasWithBothOptionsLabel" style="width: 37vh; background-color: #a7c957;">
           <div class="offcanvas-header " style="width: 35vh;">
             <img v-if="user" class="imgNav" :src=user.photo alt="">
@@ -46,15 +46,15 @@
           </div>
           <div class="offcanvas-body">
             <nav class="p-3 d-flex flex-column justify-content-center align-item-center gap-4">
-              <RouterLink to="/HomePosts" id="offcanva">Home</RouterLink>
-              <RouterLink to="Users" id="offcanva">Users</RouterLink>
-              <RouterLink to="/market" id="offcanva">Marcketplace</RouterLink>
-              <RouterLink to="/AboutUs" id="offcanva">About Us</RouterLink>
-              <RouterLink to="/Eventos" id="offcanva">Events</RouterLink>
-              <RouterLink to="/Donation" id="offcanva">Donation</RouterLink>
-              <RouterLink to="/RulesAndPolice" id="offcanva">Rules and Polices</RouterLink>
+                <li data-bs-dismiss="offcanvas"><RouterLink to="/HomePosts" id="offcanva">Home</RouterLink></li>
+                <li data-bs-dismiss="offcanvas"><RouterLink to="Users" id="offcanva">Users</RouterLink></li>
+                <li data-bs-dismiss="offcanvas"><RouterLink to="/market" id="offcanva">Marcketplace</RouterLink></li>
+                <li data-bs-dismiss="offcanvas"><RouterLink to="/AboutUs" id="offcanva">About Us</RouterLink></li>
+                <li data-bs-dismiss="offcanvas"><RouterLink to="/Eventos" id="offcanva">Events</RouterLink></li>
+                <li data-bs-dismiss="offcanvas"><RouterLink to="/Donation" id="offcanva">Donation</RouterLink></li>
+                <li data-bs-dismiss="offcanvas"><RouterLink to="/RulesAndPolice" id="offcanva">Rules and Polices</RouterLink></li>
             </nav>
-            <div class="d-flex align-items-center">
+            <div class="d-flex align-items-center justify-content-center">
 
               <button v-if="user" class="btn btn-danger" @click="logout">Logout</button>
             </div>
@@ -73,6 +73,10 @@
 }
 .name{
   font-size: 1rem;
+  text-align: center;
+  font-weight: 700;
+  color: white;
+  text-shadow: 0 0 8px black;
 }
 .header {
   height: 3vh !important;
@@ -111,6 +115,11 @@
 #logo {
 height: 40px;
 width: auto;
+}
+
+li {
+  list-style-type: none;
+  text-align: center;
 }
 #offcanva {
   text-decoration: none;

@@ -5,9 +5,14 @@ const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
-      path: '/',
+      path: '/home',
       name: 'Home',
       component: HomeView
+    },
+    {
+      path: '/',
+      name: 'Loader',
+      component: () => import('../views/Loaders.vue')
     },
     {
       path: '/AboutUs',
@@ -106,7 +111,10 @@ const router = createRouter({
       name: 'pruebainput',
       component: () => import('../views/Pruebainput.vue')
     },
-  ]
+  ],
+  scrollBehavior(to, from, savedPosition) {
+    return { top: 0 }
+  },
 })
 
 export default router

@@ -29,21 +29,21 @@ const addItem = (product) => {
 
     } else {
         cart.value.map(prod => {
-            if (prod.name == product.product.name/*  && prod.unit < product.product.stock */) {
+            if (prod.name == product.product.name && prod.unit < product.product.stock) {
                 prod.unit += 1;
                 msjCarrito.value.clases.display = 'd-flex';
                 msjCarrito.value.clases.color = 'alert-success';
                 msjCarrito.value.msj = 'A unit has been added to the cart.';
                 setTimeout(() => {
                     msjCarrito.value.clases.display = 'd-none';
-                }, 1500);
+                }, 1250);
             } else {
-                /* msjCarrito.value.clases.display = 'd-flex';
+                msjCarrito.value.clases.display = 'd-flex';
                 msjCarrito.value.clases.color = 'alert-danger';
-                msjCarrito.value.msj = 'No hay mas unidades en stock.';
+                msjCarrito.value.msj = 'There are no more units in stock.';
                 setTimeout(() => {
                     msjCarrito.value.clases.display = 'd-none';
-                }, 1500); */
+                }, 1250);
             }
         })
 

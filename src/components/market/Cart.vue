@@ -41,7 +41,8 @@ const eduContador = (cart) => {
                 </div>
                 <div class="modal-footer justify-content-center">
                     <button type="button" class="btn btn-danger" @click="emits('deleteCart')">Empty Cart <font-awesome-icon icon="fa-solid fa-trash" /></button>
-                    <a href="https://mpago.la/21PfTaN" target="_blank"><button type="button" class="btn btn-success">Buy <font-awesome-icon icon="fa-solid fa-money-bill" /></button></a>
+                    <a v-if="cart.length != 0" href="https://mpago.la/21PfTaN" target="_blank"><button type="button" class="btn btn-success">Buy <font-awesome-icon icon="fa-solid fa-money-bill" /></button></a>
+                    <a v-if="cart.length == 0" href="https://mpago.la/21PfTaN" target="_blank"><button type="button" class="btn btn-success disabled">Buy <font-awesome-icon icon="fa-solid fa-money-bill" /></button></a>
                 </div>
             </div>
         </div>

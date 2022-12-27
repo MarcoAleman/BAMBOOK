@@ -81,6 +81,7 @@ const getchats = (id) =>{
                 id: doc.id,
                 date: doc.data().dates,
                 name: doc.data().user,
+                email: doc.data().email,
                 photo: doc.data().photo,
                 message: doc.data().text,
             }

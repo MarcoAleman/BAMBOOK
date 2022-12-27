@@ -18,7 +18,7 @@ onMounted(() => {
 <template>
     <nave v-if="user" />
     <RouterView />
-    <FooterMenu />
+    <FooterMenu v-if="user" />
 </template>
 
 <style scoped>

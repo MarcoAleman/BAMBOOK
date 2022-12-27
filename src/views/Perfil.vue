@@ -29,10 +29,10 @@
             <h2 class="fs-2 fw-bold text-black">{{user? user.name : newUserName}}</h2>
         </div>
         <div class="text-center">
-            <h2  v-if="myPosts.length > 0" class="text-center text-black fs-1 my-4">Tus Posts</h2>
-            <h2 v-if="!user? !user : myPosts.length <= 0" class="text-center text-dark">Usted no tiene Posts. </h2>
+            <h2  v-if="myPosts.length > 0" class="text-center text-black fs-1 my-4">Posts</h2>
+            <h2 v-if="!user? !user : myPosts.length <= 0" class="text-center text-dark">You have no Posts. </h2>
             <router-link  to="/CreatePost" v-if="!user? user : myPosts.length <= 0 " class="text-dark fs-3 fw-bold " style=" text-decoration: none; margin: auto;" >Cree uno ahora</router-link>
-            <router-link to="/HomePosts" v-if="!user" class="text-center iniciarSesion fs-3 fw-medium"> Inicie Sesion con Google</router-link>
+            <router-link to="/HomePosts" v-if="!user" class="text-center iniciarSesion fs-3 fw-medium">Sign in with Google</router-link>
         </div>
         <div class="mt-2">
         <Post v-for="post in myPosts" :key="post.id" :post="post" />

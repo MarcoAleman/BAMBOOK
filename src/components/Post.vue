@@ -25,7 +25,7 @@
             </button>
             <ul class="dropdown-menu ">
                 <!-- Dropdown menu links -->
-                <button  style="width: 100%; height: 100%; border: none; color: white; backgroud: white;" class="text-dark bg-light" @click="deletePost(post.id, post.email)">Borrar post</button>
+                <button  style="width: 100%; height: 100%; border: none; color: white; backgroud: white;" class="text-dark bg-light" @click="deletePost(post.id, post.email)">Delete</button>
             </ul>
         </div>
             <img class="imgPerfil" referrerpolicy="no-referrer" :src="post.photo? post.photo : 'https://media.istockphoto.com/id/1332100919/vector/man-icon-black-icon-person-symbol.jpg?s=612x612&w=0&k=20&c=AVVJkvxQQCuBhawHrUhDRTCeNQ3Jgt0K1tXjJsFy1eg='" />

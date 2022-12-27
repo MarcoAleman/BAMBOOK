@@ -7,8 +7,6 @@ import { addMessage, getchats } from '../../firebase/addmsj';
 import chats from '../../store/chatStore';
 import MensajesVue from './Mensajes.vue';
 
-let date = Date.now()
-
 const texto = ref('')
 
 
@@ -20,7 +18,7 @@ const newMessage = () => {
         email: user.value.email,
         photo: user.value.photo,
         text: texto.value,
-        dates: date
+        dates: Date.now()
     }
     addMessage(idgenerada.value.toString(), messageNew)
 }

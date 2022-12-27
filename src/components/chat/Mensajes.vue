@@ -17,7 +17,7 @@ const props = defineProps({
             <h2 class="text-center mt-2 mx-1">{{ chat.name }}</h2>
         </div>
         <p class="mx-4 pb-2">{{ chat.message }}</p>
-<!--         <p class="text-center">{{ chat.date }}</p> -->
+        <p class="text-center">{{ chat.date }}</p>
     </div>
 
 </template>

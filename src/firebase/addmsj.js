@@ -86,16 +86,11 @@ const getchats = (id) =>{
                 message: doc.data().text,
             }
             chats.value.push(chat)
+            
         })
-        chats.value.sort((o1, o2) => {
-            if (o1.date < o2.date){
-                return -1;     
-            } else if (o1.date > o2.date ) {
-                return 1;
-            }
-        })
-            console.log(chats.value);
-        }
+        chats.value.sort((o1, o2) => o2.date - o1.date)
+        console.table(chats.value);    
+    }
     )}
 
 export {addMessage, getchats, addId}

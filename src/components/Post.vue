@@ -4,6 +4,8 @@ import { ref, computed } from 'vue';
     import CommentContainer from './CommentContainer.vue'
     import { deletePost } from '../firebase/posts';
     import comments from '../store/commentStore.js';
+    import user from '../store/users.js'
+
 
 
 
@@ -32,7 +34,7 @@ import { ref, computed } from 'vue';
         <div class="nomYimg d-flex">
             <!-- nuevo -->
                     <!-- Default dropup button -->
-        <div class="btn-group dropdown boton-contenedor">
+        <div v-if="user !== null && user.email == post.email" class="btn-group dropdown boton-contenedor">
             <button class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
             </button>
             <ul class="dropdown-menu ">

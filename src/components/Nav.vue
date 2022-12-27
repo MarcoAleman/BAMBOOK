@@ -48,7 +48,7 @@
             <nav class="p-3 d-flex flex-column justify-content-center align-item-center gap-4">
                 <li data-bs-dismiss="offcanvas"><RouterLink to="/HomePosts" id="offcanva">Home</RouterLink></li>
                 <li data-bs-dismiss="offcanvas"><RouterLink to="Users" id="offcanva">Users</RouterLink></li>
-                <li data-bs-dismiss="offcanvas"><RouterLink to="/market" id="offcanva">Marcketplace</RouterLink></li>
+                <li data-bs-dismiss="offcanvas"><RouterLink to="/market" id="offcanva">Marketplace</RouterLink></li>
                 <li data-bs-dismiss="offcanvas"><RouterLink to="/AboutUs" id="offcanva">About Us</RouterLink></li>
                 <li data-bs-dismiss="offcanvas"><RouterLink to="/Eventos" id="offcanva">Events</RouterLink></li>
                 <li data-bs-dismiss="offcanvas"><RouterLink to="/Donation" id="offcanva">Donation</RouterLink></li>

@@ -22,7 +22,7 @@ const addItem = (product) => {
 
         msjCarrito.value.clases.display = 'd-flex';
         msjCarrito.value.clases.color = 'alert-success';
-        msjCarrito.value.msj = 'Se agrego el producto al carrito.';
+        msjCarrito.value.msj = 'The product was added to the cart.';
         setTimeout(() => {
             msjCarrito.value.clases.display = 'd-none';
         }, 1500);
@@ -33,7 +33,7 @@ const addItem = (product) => {
                 prod.unit += 1;
                 msjCarrito.value.clases.display = 'd-flex';
                 msjCarrito.value.clases.color = 'alert-success';
-                msjCarrito.value.msj = 'Se ha sumado una unidad al carrito.';
+                msjCarrito.value.msj = 'A unit has been added to the cart.';
                 setTimeout(() => {
                     msjCarrito.value.clases.display = 'd-none';
                 }, 1500);
@@ -71,6 +71,7 @@ onMounted(() => {
 </script>
 
 <template>
+    <h1 class="title text-center mt-2 mb-0">Green  Market</h1>
     <div class="card-ctn d-flex justify-content-center align-items-center flex-wrap gap-3 mb-5">
         <Card @addItem="addItem" v-for="product in products" :product="product" />
     </div>
@@ -82,6 +83,9 @@ onMounted(() => {
 </template>
 
 <style scoped>
+.title {
+    font-weight: 900;
+}
 #mensaje-carrito {
     margin: 0 auto 10px;
 }

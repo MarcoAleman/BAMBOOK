@@ -10,7 +10,7 @@ const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 const finalPrice = (price, discount) => {
     if (discount > 0) {
-        return toThousand(price - ((price * discount) / 100))
+        return toThousand(Math.round(price - ((price * discount) / 100)))
     } else {
         return toThousand(price)
     }
@@ -24,7 +24,7 @@ const finalPrice = (price, discount) => {
                 <img class="rounded-top" :src="product.photo ? product.photo :'https://picsum.photos/200'" :alt="product.name">
             </div>
             <article class="product-box_data">
-                <h2>{{ finalPrice(product.price, product.discount) }}</h2>
+                <h2>${{ finalPrice(product.price, product.discount) }}</h2>
                 <span>{{ product.discount > 0 ? product.discount + ` % OFF` : '' }}</span>
                 <p class="text-center">{{ product.name }}</p>
                 <font-awesome-icon class="icon p-2" icon="fas fa-truck" />

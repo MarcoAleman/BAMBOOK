@@ -5,12 +5,16 @@ const props = defineProps({
 })
 
 const emits = defineEmits(['deleteItem', 'deleteCart'])
+
+const eduContador = (cart) => {
+            return cart.reduce((acc, prod) => acc + prod.unit, 0);
+        }
 </script>
 
 <template>
     <div class="icon-cart" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
         <font-awesome-icon icon="fas fa-cart-shopping" />
-        <div v-cloak class="counter-cart">{{ cart.length || 0 }}</div>
+        <div v-cloak class="counter-cart">{{ eduContador(cart) }}</div>
     </div>
 
     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
@@ -18,7 +22,7 @@ const emits = defineEmits(['deleteItem', 'deleteCart'])
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5 text-center" id="staticBackdropLabel">Cart</h1>
+                    <h1 class="modal-title fs-5 text-center w-100" id="staticBackdropLabel">Cart</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div v-if="cart.length != 0" class="modal-body">
@@ -35,9 +39,9 @@ const emits = defineEmits(['deleteItem', 'deleteCart'])
                 <div v-else class="modal-body text-center">
                     <p>Cart is empty!!!</p>
                 </div>
-                <div class="modal-footer">
+                <div class="modal-footer justify-content-center">
                     <button type="button" class="btn btn-danger" @click="emits('deleteCart')">Empty Cart <font-awesome-icon icon="fa-solid fa-trash" /></button>
-                    <a href="https://mpago.la/21PfTaN" target="_blank"><button type="button" class="btn btn-success">Buy</button></a>
+                    <a href="https://mpago.la/21PfTaN" target="_blank"><button type="button" class="btn btn-success">Buy <font-awesome-icon icon="fa-solid fa-money-bill" /></button></a>
                 </div>
             </div>
         </div>

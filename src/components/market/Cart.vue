@@ -37,7 +37,7 @@ const emits = defineEmits(['deleteItem', 'deleteCart'])
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-danger" @click="emits('deleteCart')">Empty Cart <font-awesome-icon icon="fa-solid fa-trash" /></button>
-                    <button type="button" class="btn btn-success">Buy</button>
+                    <a href="https://mpago.la/21PfTaN" target="_blank"><button type="button" class="btn btn-success">Buy</button></a>
                 </div>
             </div>
         </div>

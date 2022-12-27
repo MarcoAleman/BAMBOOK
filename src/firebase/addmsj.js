@@ -7,7 +7,8 @@ import {
     collection,
     setDoc,
     doc,
-    onSnapshot
+    onSnapshot,
+    orderBy
 } from 'firebase/firestore'
 import chats from '../store/chatStore.js'
 import mail from '../store/userMail.js'
@@ -82,7 +83,6 @@ const getchats = (id) =>{
             }
             chats.value.unshift(chat)
         })
-        chats.value.sort((a, b) => b.date - a.date )
         console.log(chats.value);
     })
 }

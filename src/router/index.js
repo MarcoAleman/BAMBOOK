@@ -101,6 +101,11 @@ const router = createRouter({
       name: 'userView',
       component: () => import('../views/userView.vue')
     },
+    {
+      path: '/pruebainput',
+      name: 'pruebainput',
+      component: () => import('../views/Pruebainput.vue')
+    },
   ]
 })
 

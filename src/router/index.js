@@ -106,7 +106,10 @@ const router = createRouter({
       name: 'pruebainput',
       component: () => import('../views/Pruebainput.vue')
     },
-  ]
+  ],
+  scrollBehavior(to, from, savedPosition) {
+    return { top: 0 }
+  },
 })
 
 export default router

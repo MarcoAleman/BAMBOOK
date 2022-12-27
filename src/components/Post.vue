@@ -1,7 +1,12 @@
 <script setup>
+import { ref, computed } from 'vue';
     import NewComment from './NewComment.vue'
     import CommentContainer from './CommentContainer.vue'
     import { deletePost } from '../firebase/posts';
+    import comments from '../store/commentStore.js';
+
+
+
     
     //Experimento 
     import userMail from '../store/userMail.js'
@@ -14,8 +19,15 @@
         post: {},
         typeof: Object
     })
+
+    const commentsLength = ref([])
+
+    const updateComments = computed(() => {
+        commentsLength.value = comments.value.filter(comment => comment.postId === props.post.id)
+    })
 </script>
 <template>
+    {{ updateComments }}
     <div class="postContenedor mx-3">
         <div class="nomYimg d-flex">
             <!-- nuevo -->
@@ -41,7 +53,7 @@
             </div>
             <div class="botones mx-2">
                 <font-awesome-icon class="comment" icon="fa-solid fa-comment" />
-                <p class="p text-dark">2</p>
+                <p class="p text-dark">{{commentsLength.length}}</p>
             </div>
             <!-- <span class="text-white text-sm">{{post.likes.length}}</span> -->
             <!-- <span class="text-white text-sm">{{post.comments.length}}</span -->

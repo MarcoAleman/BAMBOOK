@@ -1,6 +1,8 @@
 <script setup>
 import { deleteComment } from '../firebase/comments';
 import userMail from '../store/userMail.js'
+import user from '../store/users.js'
+
     function recibirEmail(email) {
         userMail.value = email
     }
@@ -13,7 +15,7 @@ import userMail from '../store/userMail.js'
 <template>
     <div class="postContenedor mx-3">
         <div class="nomYimg d-flex">
-            <div class="btn-group dropdown boton-contenedor">
+            <div v-if="user !== null && user.email == comment.email" class="btn-group dropdown boton-contenedor">
                 <button class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                 </button>
                 <ul class="dropdown-menu ">

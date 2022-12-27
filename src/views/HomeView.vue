@@ -11,7 +11,7 @@ onMounted(() => {
 })
 </script>
 <template>
-      <Login v-if="!user"/>
+    <Login v-if="!user"/>
 </template>
 <style scoped>
 

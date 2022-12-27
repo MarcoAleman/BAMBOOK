@@ -17,6 +17,7 @@ const newMessage = () => {
     let messageNew = {
         id: crypto.randomUUID(),
         user: user.value.name,
+        email: user.value.email,
         photo: user.value.photo,
         text: texto.value,
         dates: date

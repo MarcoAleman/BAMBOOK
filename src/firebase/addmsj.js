@@ -23,7 +23,7 @@ import {
     getDocs
 } from "firebase/firestore"
 import { userRef } from './users.js'
-import { createAssignmentExpression } from '@vue/compiler-core'
+/* import { createAssignmentExpression } from '@vue/compiler-core' */
 
 
 const ids = ref(null)

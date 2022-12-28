@@ -6,6 +6,7 @@ import mail from '../../store/userMail.js'
 import { addMessage, getchats } from '../../firebase/addmsj';
 import chats from '../../store/chatStore';
 import MensajesVue from './Mensajes.vue';
+import { text } from 'stream/consumers';
 
 const texto = ref('')
 

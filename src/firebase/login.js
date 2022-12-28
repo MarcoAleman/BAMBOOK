@@ -40,6 +40,13 @@ const loginWithTwitter = async () => {
   console.log('click');
     signInWithPopup(auth, twitterProvider)
       .then(async(result) => {
+        const credential = TwitterAuthProvider.credentialFromResult(result);
+        const token = credential.accessToken;
+        const secret = credential.secret;
+
+    // The signed-in user info.
+    const user = result.user;
+    console.log(user);
         console.log('resultados', result)
         /* let newUser = {
             name: result.user.displayName,

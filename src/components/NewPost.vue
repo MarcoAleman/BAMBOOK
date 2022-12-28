@@ -58,14 +58,14 @@ const notCreate = () => {
 <template>
     <main id="fondo">
     {{updateData}}
-    <h1 class="text-center text-dark mt-3">Create your post</h1>
+    <h1 class="text-center text-light mt-3 text-shadow">Create your post</h1>
     <form @submit.prevent="addNewPost">
         <div class="formulario m-auto p-2">
             <div class="nYf d-flex align-items-center justify-content-center gap-2 flex-column">
                 <img :src="user.photo? user.photo : 'https://media.istockphoto.com/id/1332100919/vector/man-icon-black-icon-person-symbol.jpg?s=612x612&w=0&k=20&c=AVVJkvxQQCuBhawHrUhDRTCeNQ3Jgt0K1tXjJsFy1eg='"  class="fotoPerfil d-flex justify-content-center align-items-center" />
-                <h2 class="fs-5 ">{{user.name? user.name : newUserName}}</h2>
+                <h2 class="fs-5 text-light mt-3 text-shadow">{{user.name? user.name : newUserName}}</h2>
             </div>
-            <textarea class="p-1" required minlength="6" maxlength="160" v-model="message"  placeholder="What are you thinking?"></textarea>
+            <textarea class="mt-2" required minlength="6" maxlength="160" v-model="message"  placeholder="What are you thinking?"></textarea>
             <div class="d-flex justify-content-center">
                 <button class="text-align-center text-center mb-2">Post</button>
             </div>
@@ -77,14 +77,13 @@ const notCreate = () => {
 <style scoped>
     input, textarea{
         width: 100%;
-        height: 5.2rem;
         margin: auto;
     }
     button{
         border-radius: 10px;
         border: none;
-        color: black;
-        background-color: var(--primario);
+        color: white;
+        background-color: #43291f;
         height: 3rem;
         font-weight: bold;
         font-size: .9rem;
@@ -100,7 +99,7 @@ const notCreate = () => {
     }
     ::placeholder{
         text-align: center;
-        padding: 1.7rem;
+        padding: 2.7rem;
     }
     img{
         border-radius: 50%;
@@ -113,5 +112,11 @@ background-size:cover;
 background-attachment: fixed;
 padding-top: 1rem;
 padding-bottom: 100%;
+    }
+    textarea{
+        border: 1.6px solid #43291f;
+        border-radius: 10px;
+        height: 8rem;
+        
     }
 </style>

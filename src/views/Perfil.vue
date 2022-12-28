@@ -41,6 +41,7 @@
     </main>
 </template>
 <style scoped>
+
 .iniciarSesion{
     color: var(--primario);
     text-decoration: none;

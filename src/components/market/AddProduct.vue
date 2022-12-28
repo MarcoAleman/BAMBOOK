@@ -46,7 +46,7 @@ const create = () => {
     <main id="fondo">
         <form @submit.prevent="addNewProduct" class="ctn mt-2 mb-5 p-2 py-3 d-flex flex-column text-center rounded text-white">
             <h2 class="fw-bold">Add a product</h2>
-            <div class="input-ctn " data-validate="Name is required">
+            <div class="input-ctn mt-3" data-validate="Name is required">
                 <label for="name">Product's name</label>
                 <input v-model="name" type="text" id="name" placeholder="Product's name" required>
             </div>
@@ -81,7 +81,7 @@ section.ctn,
 form.ctn {
     margin: 0 auto;
     border-radius: 10px;
-    background-color: #a9c957;
+    background-color: #e4dad4;
     width: 90%;
     border-radius: 10px 10px 0 0;
     box-shadow: 0 0 5px black;
@@ -99,6 +99,9 @@ form .input-ctn {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    color: black;
+    font-weight: bold;
+    font-size: large;
 }
 
 .input-ctn input,
@@ -123,7 +126,7 @@ form .input-ctn {
 
 .btn-form {
     width: 80%;
-    background-color: var(--primario);
+    background-color: #43291f;
     color: white;
     align-self: center;
 }

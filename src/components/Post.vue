@@ -43,14 +43,13 @@ const sureDeletePost = (id, mail) => {
             deletePost(id, mail)
             Swal.fire(
                 {title: 'Deleted!',
-                text: 'Your file has been deleted.',
+                text: 'Your post has been deleted.',
                 showConfirmButton: false,
                 timer: 1500,
-                icon: 'success',}
+                icon: 'success'}
             )
         }
     })
-
 }
 </script>
 <template>

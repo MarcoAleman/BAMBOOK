@@ -1,7 +1,8 @@
 <script setup>
 import { deleteComment } from '../firebase/comments';
 import userMail from '../store/userMail.js'
-import user from '../store/users.js'
+import user from '../store/users.js';
+import Swal from 'sweetalert2';
 
     function recibirEmail(email) {
         userMail.value = email
@@ -10,6 +11,29 @@ import user from '../store/users.js'
         comment: {},
         typeof: Object,
     })
+
+    const sureDeleteComment = (id, mail) => {
+    Swal.fire({
+        title: 'Are you sure?',
+        text: "You won't be able to revert this!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes, delete it!'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            deleteComment(id, mail)
+            Swal.fire(
+                {title: 'Deleted!',
+                text: 'Your comment has been deleted.',
+                showConfirmButton: false,
+                timer: 1500,
+                icon: 'success'}
+            )
+        }
+    })
+}
 </script>
 
 <template>
@@ -19,7 +43,7 @@ import user from '../store/users.js'
                 <button class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                 </button>
                 <ul class="dropdown-menu ">
-                    <button style="width: 100%; height: 100%; border: none; color: white; backgroud: white;" class="text-dark bg-light" @click="deleteComment(comment.id, comment.email)">Delete</button>
+                    <button style="width: 100%; height: 100%; border: none; color: white; backgroud: white;" class="text-dark bg-light" @click="sureDeleteComment(comment.id, comment.email)">Delete</button>
                 </ul>
             </div>
             <!-- fin -->

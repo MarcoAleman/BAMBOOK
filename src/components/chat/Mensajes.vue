@@ -17,7 +17,7 @@ const props = defineProps({
             <h2 class="text-center pt-2 px-1 text-light">{{ chat.name }}</h2>
         </div>
         <p class="mx-4 pb-2 text-light">{{ chat.message }}</p>
-        <p class="date text-white">{{new Date(chat.date).toLocaleString("en-us", { dateStyle: "short" })}}</p>
+        
     </div>
 
 </template>

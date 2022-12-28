@@ -1,4 +1,4 @@
-<script setup>
+<script setup >
 import PruebainputVue from '../components/chat/Pruebainput.vue';
 
 </script>

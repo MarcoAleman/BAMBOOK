@@ -4,7 +4,7 @@
 </script>
 
 <template>
-  <header class="container-fluid border mt-1">
+  <header class="sticky-top bg-white container-fluid border">
     <div class="row">
       <div class="col-5 d-flex">
         <img src="../assets/img/logo.png" id="logo" alt="LOGO" class="col-3">

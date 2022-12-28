@@ -47,8 +47,5 @@ const newMessage = () => {
 </template>
 
 <style scoped>
-.submit {
-    /* position: sticky;
-    bottom: 10vh; */
-}
+
 </style>

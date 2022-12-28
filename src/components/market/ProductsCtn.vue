@@ -71,6 +71,7 @@ onMounted(() => {
 </script>
 
 <template>
+    <div  id="fondo">
     <h1 class="title text-center mt-2 mb-0">Green  Market</h1>
     <div class="card-ctn d-flex justify-content-center align-items-center flex-wrap gap-3 mb-5">
         <Card @addItem="addItem" v-for="product in products" :product="product" />
@@ -80,6 +81,7 @@ onMounted(() => {
     <div :class="[msjCarrito.clases.display, msjCarrito.clases.color]"
         class="alert alert-success d-flex align-items-center justify-content-center w-50 fixed-bottom text-center mb-5" role="alert"
         id="mensaje-carrito" v-text="msjCarrito.msj"></div>
+</div>
 </template>
 
 <style scoped>
@@ -88,5 +90,13 @@ onMounted(() => {
 }
 #mensaje-carrito {
     margin: 0 auto 10px;
+}
+#fondo {
+    height:100%;
+background-image:url('../img/fondo.jpg');
+background-size:cover;
+background-attachment: fixed;
+padding-top: 1rem;
+padding-bottom: 1rem;
 }
 </style>

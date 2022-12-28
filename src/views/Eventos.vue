@@ -6,7 +6,7 @@
 
 
 
-    <div class="p-4  d-flex flex-wrap justify-content-center align-item-center gap-1">
+    <div class="p-4  d-flex flex-column justify-content-center align-item-center gap-1">
       <h1>UPCOMING EVENTS</h1>
       <div class="card" style="width: 18rem;">
         <img
@@ -79,21 +79,19 @@
 }
 .card {
   border-radius: 23px;
-/* background: #e0e0e0; */
-/* box-shadow:  34px 34px 67px #5a5a5a, */
-             /* -34px -34px 67px #ffffff; */
+
 }
 img {
   border-radius: 23px;
 }
 #eventos {
-  background-color: #e5e5f7;
-/* opacity: 0.5; */
-background-image:  linear-gradient(135deg, #a7c957 25%, transparent 25%), linear-gradient(225deg, #a7c957 25%, transparent 25%), linear-gradient(45deg, #a7c957 25%, transparent 25%), linear-gradient(315deg, #a7c957 25%, #e5e5f7 25%);
-background-position:  8px 0, 8px 0, 0 0, 0 0;
-background-size: 8px 8px;
-background-repeat: repeat;
 
+height:83%;
+background-image:url('../assets/img/fondo.jpg');
+background-size:cover;
+background-attachment: fixed;
 }
+
+
 
 </style>

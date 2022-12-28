@@ -63,13 +63,10 @@
   
   <style>
   #about {
-    min-height: 83vh;  
-    background-color: #e5e5f7;
-/* opacity: 0.5; */
-background-image:  linear-gradient(135deg, #a7c957 25%, transparent 25%), linear-gradient(225deg, #a7c957 25%, transparent 25%), linear-gradient(45deg, #a7c957 25%, transparent 25%), linear-gradient(315deg, #a7c957 25%, #e5e5f7 25%);
-background-position:  8px 0, 8px 0, 0 0, 0 0;
-background-size: 8px 8px;
-background-repeat: repeat;
+    height:83%;
+background-image:url('../assets/img/fondo.jpg');
+background-size:cover;
+background-attachment: fixed;
   }
   .img1 {
     min-height: 100px;

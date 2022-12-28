@@ -154,16 +154,12 @@ form .input-ctn {
 
 .btn-form {
     width: 80%;
-    background-color: var(--primario);
+    background-color: #43291f;
     color: white;
     align-self: center;
 }
 
-.btn-form:hover {
-    background-color: var(--primario);
-    color: white;
-    box-shadow: white 0 0 5px;
-}
+
 
 @media screen and (min-width: 768px) {
     form {

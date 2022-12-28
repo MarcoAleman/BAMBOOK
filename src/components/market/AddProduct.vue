@@ -132,7 +132,7 @@ form .input-ctn {
 }
 
 .btn-form:hover {
-    background-color: var(--primario);
+    /* background-color: var(--primario); */
     color: white;
     box-shadow: white 0 0 5px !important;
 }

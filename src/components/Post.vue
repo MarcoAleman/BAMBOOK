@@ -77,7 +77,7 @@ import { ref, computed } from 'vue';
     }
     .botones{
         margin: auto;
-        background: var(--background);
+        background: var(--primario);
         width: 100%;
         height: 2rem;
         border-radius: 2rem;

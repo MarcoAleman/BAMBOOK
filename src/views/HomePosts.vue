@@ -19,7 +19,7 @@ onMounted(() => {
             <Login v-if="!user" />
         </div>
         <div v-if="user">
-            <h1 class="text-center text-dark my-4">Recent Posts</h1>
+            <h1 class="text-center text-dark mt-4 mb-5 fw-bolder ">Recent Posts</h1>
             <Post v-for="post in posts" :post="post" :key="post.id" />
         </div>
     </main>
@@ -29,9 +29,9 @@ onMounted(() => {
 main {
     padding-bottom: 2.7rem;
 }
-
-#fondo {
-    background-color: var(--background);
-
+h1{
+    font-size: 2rem;
+    
 }
+
 </style>

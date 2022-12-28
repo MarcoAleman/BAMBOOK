@@ -28,7 +28,7 @@ const newMessage = () => {
 <template>
     <div class="container-fluid mb-5">
         <h1 class="text-center">Chat</h1>
-        <div class="col-12 p-2 d-flex flex-column-reverse gap-2">
+        <div class="col-12 p-2 d-flex flex-column-reverse gap-2 msjcon">
             <MensajesVue v-for="chat in chats" :chat="chat" key="chat.id" />
         </div>
         <form class="mb-3 submit ">
@@ -46,6 +46,9 @@ const newMessage = () => {
 </template>
 
 <style scoped>
+.msjcon{
+    margin-bottom: 6.7rem;
+}
 .enviar-inbt{
     position: fixed;
     bottom: 0;

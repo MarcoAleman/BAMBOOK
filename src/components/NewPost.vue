@@ -36,6 +36,7 @@
 }
 </script>
 <template>
+    <main id="fondo">
     {{updateData}}
     <h1 class="text-center text-dark mt-3">Create your post</h1>
     <form @submit.prevent="addNewPost">
@@ -50,6 +51,7 @@
             </div>
         </div>
     </form>
+</main>
 </template>
 
 <style scoped>
@@ -83,5 +85,13 @@
     img{
         border-radius: 50%;
         width: 4rem;
+    }
+    #fondo {
+        height:100%;
+background-image:url('../assets/img/fondo.jpg');
+background-size:cover;
+background-attachment: fixed;
+padding-top: 1rem;
+padding-bottom: 100%;
     }
 </style>

@@ -109,10 +109,10 @@ const pruebas = () => {
 </template>
 <style scoped>
 #contact {
-  background-color: #e5e5f7;
-opacity: 0.6;
-background: radial-gradient(circle, transparent 20%, #e5e5f7 20%, #e5e5f7 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #e5e5f7 20%, #e5e5f7 80%, transparent 80%, transparent) 25px 25px, linear-gradient(#a7c957 2px, transparent 2px) 0 -1px, linear-gradient(90deg, #a7c957 2px, #e5e5f7 2px) -1px 0;
-background-size: 50px 50px, 50px 50px, 25px 25px, 25px 25px;
+  height:100%;
+background-image:url('../assets/img/fondo.jpg');
+background-size:cover;
+background-attachment: fixed;
 }
 
 

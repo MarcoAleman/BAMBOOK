@@ -33,6 +33,7 @@ const addNewProduct = () => {
 </script>
 
 <template>
+    <main id="fondo">
     <form @submit.prevent="addNewProduct" class="ctn mt-2 mb-5 p-2 py-3 d-flex flex-column text-center rounded">
         <h2>Add a product</h2>
         <div class="input-ctn " data-validate="Name is required">
@@ -61,6 +62,7 @@ const addNewProduct = () => {
         </div>
         <button class="btn btn-form">Add Product</button>
     </form>
+</main>
 </template>
 
 <style scoped>
@@ -68,7 +70,7 @@ section.ctn,
 form.ctn {
     margin: 0 auto;
     border-radius: 10px;
-    background-color: #c9c77a;
+    background-color: #a9c957;
     width: 90%;
     border-radius: 10px 10px 0 0;
     box-shadow: 0 0 5px black;
@@ -115,5 +117,13 @@ form .input-ctn {
     background-color: var(--primario);
     color: white;
     box-shadow: white 0 0 5px;
+}
+#fondo {
+    height:100%;
+background-image:url('../img/fondo.jpg');
+background-size:cover;
+background-attachment: fixed;
+padding-top: 1rem;
+padding-bottom: 100%;
 }
 </style>

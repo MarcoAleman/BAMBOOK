@@ -18,11 +18,11 @@ onMounted(() => getUsers())
 
 <style scoped>
 #fondo {
-height:90%;
+height:100%;
 background-image:url('../assets/img/fondo.jpg');
 background-size:cover;
 background-attachment: fixed;
-padding-bottom: 1rem;
+padding-bottom: 5rem;
 
 }
 </style>

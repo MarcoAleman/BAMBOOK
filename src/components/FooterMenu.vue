@@ -7,6 +7,7 @@ import user from '../store/users.js'
             <router-link to="/HomePosts"><font-awesome-icon class="icon"  icon="fa-solid fa-house" /></router-link>
             <router-link to="/CreatePost" v-if="!user"><font-awesome-icon class="icon" icon="fa-solid fa-circle-plus" /></router-link>
             <router-link to="/CreatePost" v-if="user"><font-awesome-icon class="icon mt-1" icon="fa-solid fa-circle-plus" /></router-link>
+            <router-link to="/addproduct" v-if="user"><font-awesome-icon class="icon mt-1" icon="fa-solid fa-cash-register" /></router-link>
             <router-link  to="/Perfil" v-if="!user"><font-awesome-icon class="icon" icon="fa-solid fa-user" /></router-link>
             <router-link to="/Perfil" v-if="user"><img :src=user.photo alt=""></router-link>
         </div>

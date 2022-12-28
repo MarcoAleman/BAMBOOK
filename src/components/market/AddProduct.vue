@@ -37,23 +37,23 @@ const addNewProduct = () => {
         <h2>Add a product</h2>
         <div class="input-ctn " data-validate="Name is required">
             <label for="name">Product's name</label>
-            <input v-model="name" type="text" id="name" placeholder="Your name" required>
+            <input v-model="name" type="text" id="name" placeholder="Product's name" required>
         </div>
         <div class="input-ctn " data-validate="image is required">
             <label for="image">Image URL</label>
-            <input v-model="image" type="text" id="image" placeholder="Your image" required>
+            <input v-model="image" type="text" id="image" placeholder="Product's image" required>
         </div>
         <div class="input-ctn" data-validate="price is required">
             <label for="price">Price</label>
-            <input v-model="price" type="number" id="price" placeholder="Your price" required>
+            <input v-model="price" type="number" id="price" placeholder="Product's price" required>
         </div>
         <div class="input-ctn" data-validate="discount is required">
             <label for="discount">Discount</label>
-            <input v-model="discount" type="number" id="discount" placeholder="Your discount" required>
+            <input v-model="discount" type="number" id="discount" placeholder="Product's discount" required>
         </div>
         <div class="input-ctn" data-validate="stock is required">
             <label for="stock">Stock</label>
-            <input v-model="stock" type="number" id="stock" placeholder="Your stock" required>
+            <input v-model="stock" type="number" id="stock" placeholder="Product's stock" required>
         </div>
         <div class="input-ctn " data-validate="description is required">
             <label for="description">Description</label>

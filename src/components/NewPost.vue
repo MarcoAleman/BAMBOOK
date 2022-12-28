@@ -48,8 +48,6 @@
             <div class="d-flex justify-content-center">
                 <button class="text-align-center text-center mb-2">Post</button>
             </div>
-            <RouterLink to="/RulesAndPolice" class="text-center" id="offcanva">
-Read rules and policies</RouterLink>
         </div>
     </form>
 </template>

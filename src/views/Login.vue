@@ -1,5 +1,5 @@
 <script setup>
-import { loginWithGoogle, logout } from '../firebase/login';
+import { loginWithGoogle, loginWithTwitter, logout } from '../firebase/login';
 import user from '../store/users.js'
 import userList from '../store/userslist.js'
 import { getUsers } from '../firebase/users.js'
@@ -66,7 +66,7 @@ const pruebas = () => {
       <button class="fb btn">
         <p class="fa fa-facebook fa-fw"></p> Login with Facebook
       </button>
-      <button class="twitter btn">
+      <button class="twitter btn" @click="loginWithTwitter">
         <p class="fa fa-twitter fa-fw"></p> Login with Twitter
       </button>
       <button class="google btn" @click="loginWithGoogle">Login with Google</button>

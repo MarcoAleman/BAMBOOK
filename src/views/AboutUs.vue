@@ -63,13 +63,14 @@
   
   <style>
   #about {
-    height:100%;
+    height: 550px;
 background-image:url('../assets/img/fondo.jpg');
 background-size:cover;
 background-attachment: fixed;
-  }
+
+}
   .img1 {
-    height: 20vh;
+    height: 35vh;
    width: 90vh;
 border-radius: 1rem;
 

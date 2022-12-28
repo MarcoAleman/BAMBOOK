@@ -6,8 +6,8 @@
 
 
 
-    <div class="p-4  d-flex flex-column justify-content-center align-item-center gap-1">
-      <h1>UPCOMING EVENTS</h1>
+    <div class="p-4 mb-4 d-flex flex-wrap justify-content-center align-item-center gap-3">
+      
       <div class="card" style="width: 18rem;">
         <img
           src="https://cdn.unenvironment.org/s3fs-public/inline-images/trash.jpg"
@@ -86,7 +86,7 @@ img {
 }
 #eventos {
 
-height:83%;
+height:90%;
 background-image:url('../assets/img/fondo.jpg');
 background-size:cover;
 background-attachment: fixed;

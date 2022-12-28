@@ -11,17 +11,22 @@
     })
     
     const addNewComment = () =>{
-        let newComment = {
-            id: crypto.randomUUID(),
-            postId: props.postId,
-            date: Date.now(),
-            name: user.value.name,
-            email: user.value.email,
-            text: text.value,
-            photo: user.value.photo,
+        if(text.value.trim().length >= 2){
+            let newComment = {
+                id: crypto.randomUUID(),
+                postId: props.postId,
+                date: Date.now(),
+                name: user.value.name,
+                email: user.value.email,
+                text: text.value,
+                photo: user.value.photo,
+            }
+            addComment(newComment)
+            text.value = ''
+        } else {
+            console.log('no se puede postear algo vacio');
+            text.value = ''
         }
-        addComment(newComment)
-        text.value = ''
     }
 </script>
 <template>

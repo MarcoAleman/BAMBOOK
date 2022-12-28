@@ -30,12 +30,7 @@ onMounted(() => {
         padding-bottom: 2.7rem;
     }
     #fondo {
-        height:90%;
-background-image:url('../assets/img/fondo.jpg');
-background-size:cover;
-background-attachment: fixed;
-padding-top: 1rem;
-padding-bottom: 2rem;
+background-color: var(--background);
 
     }
 </style>

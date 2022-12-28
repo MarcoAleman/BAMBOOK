@@ -4,8 +4,8 @@ import { loginWithGoogle, logout } from '../firebase/login.js';
 
 </script>
 <template>
-  <main id="home">
-    <div class="d-flex flex-wrap" >
+  <main>
+    <div class="d-flex flex-wrap" id="home">
       <div class="d-flex flex-column">
         <div class="d-flex flex-wrap justify-content-center align-item-center mt-4">
           <a class="link" href="#">B</a>
@@ -28,7 +28,7 @@ import { loginWithGoogle, logout } from '../firebase/login.js';
           <button class="twitter btn">
             <i class="fa fa-twitter fa-fw"></i> Login with Twitter
           </button>
-          <router-link to="/"><button @click="loginWithGoogle" class="google btn mb-1"><i class="fa fa-google fa-fw"></i> Login with Google+</button></router-link> 
+          <router-link to="/HomePosts"><button @click="loginWithGoogle" class="google btn mb-1"><i class="fa fa-google fa-fw"></i> Login with Google+</button></router-link> 
         </div>
       </div>
 
@@ -43,18 +43,14 @@ import { loginWithGoogle, logout } from '../firebase/login.js';
 <style scoped>
 
 #bienvenidos {
-  text-shadow: 2px 2px 2px #ffffff;
+  text-shadow: 1px 1px 1px #afc957;
   display: flex;
   flex-wrap: wrap;
   text-align: center;
-  padding-bottom: 5rem;
-  
-
 
 }
 
 .link {
-  text-shadow: 2px 2px 2px #ffffff;
   text-decoration: none;
   -webkit-transition: 1s ease;
   font-size: 2.4rem;
@@ -103,14 +99,6 @@ button{
   margin-top: .4rem;
   width: 17rem;
   height: 3rem;
-}
-#home {
-  height:100%;
-background-image:url('../assets/img/fondo.jpg');
-background-size:cover;
-background-attachment: fixed;
-padding-top: 1rem;
-padding-bottom: 100%;
 }
 
 </style>

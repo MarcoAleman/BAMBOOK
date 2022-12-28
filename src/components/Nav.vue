@@ -35,7 +35,8 @@ import {logout} from '../firebase/login.js'
       </div>
       <div class="col-5 offset-2">
         <router-link to="/market" ><font-awesome-icon  class="icon col-2" icon="fa-solid fa-store" /></router-link> 
-        <font-awesome-icon class="icon col-2" icon="fa-solid fa-inbox" />
+        <router-link to="/UserMessage" ><font-awesome-icon class="icon col-2" icon="fa-solid fa-inbox" /></router-link> 
+        
         <button class="btn col-2" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions"
           aria-controls="offcanvasWithBothOptions" id="iconooffcanva"><font-awesome-icon icon="fa-solid fa-bars" /></button>
         <div class="offcanvas offcanvas-start " data-bs-scroll="false" tabindex="-1" id="offcanvasWithBothOptions"

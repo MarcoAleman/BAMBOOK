@@ -102,6 +102,12 @@ const router = createRouter({
       name: 'pruebainput',
       component: () => import('../views/Pruebainput.vue')
     },
+    {
+      path: '/UserMessage',
+      name: 'UserMessage',
+      component: () => import('../components/UserMessage.vue')
+    },
+    
   ],
   scrollBehavior(to, from, savedPosition) {
     return { top: 0 }

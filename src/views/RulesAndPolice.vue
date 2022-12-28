@@ -1,7 +1,7 @@
 <template>
 
 
-    <div class="p-2 d-flex flex-column justify-content-center align-item-center" id="rules">
+    <div class="p-2 mb-5 d-flex flex-column justify-content-center align-item-center" id="rules">
       <img class="img1 p-2" src="../assets/img/pasted-image-0.png" alt="">
       <div class="accordion " id="accordionPanelsStayOpenExample">
         <div class="accordion-item">
@@ -148,7 +148,7 @@
     
   <style>
   #rules {
-    height:83%;
+    height:85%;
 background-image:url('../assets/img/fondo.jpg');
 background-size:cover;
 background-attachment: fixed;

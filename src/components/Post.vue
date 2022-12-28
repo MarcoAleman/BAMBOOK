@@ -91,10 +91,11 @@ import { ref, computed } from 'vue';
         border-radius: 50%;
         width: 3rem;
         height: 3rem;
-        margin-right: 1rem;
+
     }
     .nomUser{
         margin-top: .3rem;
+        font-size: 1.2rem;
     }
     .postContenedor{
         min-height: 2rem;

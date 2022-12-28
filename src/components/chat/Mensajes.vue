@@ -17,15 +17,13 @@ const props = defineProps({
             <h2 class="text-center pt-2 px-1 text-light">{{ chat.name }}</h2>
         </div>
         <p class="mx-4 pb-2 text-light">{{ chat.message }}</p>
-        
     </div>
-
 </template>
 
 <style scoped>
 
 .contenedor-chat{
-    width: 15rem;
+    width: 18rem;
     background: #202C33;
     border-radius: .7rem;
 

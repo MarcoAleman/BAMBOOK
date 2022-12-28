@@ -21,6 +21,7 @@ const newMessage = () => {
         dates: Date.now()
     }
     addMessage(idgenerada.value.toString(), messageNew)
+    texto.value = ''
 }
 
 </script>

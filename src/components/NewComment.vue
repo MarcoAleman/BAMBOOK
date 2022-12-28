@@ -44,7 +44,8 @@
     width: 2.5rem;
     height: 2.5rem;
     color: black;
-    border: none;
+    border: 1px  solid var(--primario);
+    background-color: var(--primario);
 }
 .comentarios{
     display: flex;
@@ -55,6 +56,7 @@ input{
     border-radius: 15px;
     width: 75%;
     background: var(--background);
-    
+    border: 1px  solid var(--primario);
 }
+
 </style>

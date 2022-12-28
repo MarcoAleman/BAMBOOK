@@ -10,12 +10,19 @@ onMounted(() => getUsers())
 
 <template>
 
-    <body>
+    <body id="fondo">
         <h1 class="text-dark text-center">UserList</h1>
         <userItemVue v-for="user in userList" :userL="user" :key="user.id" />
     </body>
 </template>
 
 <style scoped>
+#fondo {
+height:90%;
+background-image:url('../assets/img/fondo.jpg');
+background-size:cover;
+background-attachment: fixed;
+padding-bottom: 1rem;
 
+}
 </style>

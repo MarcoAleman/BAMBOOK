@@ -14,8 +14,8 @@ onMounted(() => {
 </script>
 
 <template>
-    <main>
-        <div>
+    <main  id="fondo">
+        <div >
             <Login  v-if="!user" />
         </div>
         <div v-if="user">
@@ -28,5 +28,14 @@ onMounted(() => {
 <style scoped>
     main{
         padding-bottom: 2.7rem;
+    }
+    #fondo {
+        height:90%;
+background-image:url('../assets/img/fondo.jpg');
+background-size:cover;
+background-attachment: fixed;
+padding-top: 1rem;
+padding-bottom: 2rem;
+
     }
 </style>

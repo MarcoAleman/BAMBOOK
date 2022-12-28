@@ -1,9 +1,9 @@
 <template>
 
 
-    <div class="p-2 mb-5 d-flex flex-column justify-content-center align-item-center" id="rules">
-      <img class="img1 p-2" src="../assets/img/pasted-image-0.png" alt="">
-      <div class="accordion " id="accordionPanelsStayOpenExample">
+    <div class="p-2 mb-4 d-flex flex-wrap justify-content-center align-item-center" id="rules">
+      <img class="img1 p-2" id="img" src="../assets/img/pasted-image-0.png" alt="">
+      <div class="accordion mb-4 p-3" id="accordionPanelsStayOpenExample">
         <div class="accordion-item">
           <h2 class="accordion-header" id="panelsStayOpen-headingOne">
             <button class="accordion-button" style="background-color: #a7c957;" type="button" data-bs-toggle="collapse"
@@ -148,7 +148,7 @@
     
   <style>
   #rules {
-    height:85%;
+    height:90%;
 background-image:url('../assets/img/fondo.jpg');
 background-size:cover;
 background-attachment: fixed;
@@ -158,9 +158,14 @@ background-attachment: fixed;
   
   }
   .img1 {
-    min-height: 100px;
+    min-height: 30vh;
 border-radius: 1rem;
 
+  }
+  #img {
+   
+   height: 10vh;
+   width: 100vh;
   }
   </style>
     

@@ -12,10 +12,9 @@ window.onclick = function (event) {
     <div class=" " id="donation">
         <div>
             <div>
-                <div>
-                    <h3 class=" mt-3 text-center">Donation</h3>
-                    <form
-                        class="d-flex flex-column justify-content-center align-item-center  border border-white rounded p-2 "
+                <div >
+                   
+                    <form class=" mt-2 mb-5 d-flex flex-column justify-content-center align-item-center  border border-white rounded p-2 "
                         style="background-color: #afc957;">
                         <div>
                             <div class="d-flex flex-column justify-content-center align-item-center mt-2 p-1 gap-1">

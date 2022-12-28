@@ -1,18 +1,23 @@
 @import './base.css';
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,700&display=swap');
-:root{
+
+:root {
   --primario: #65A543;
   --negro: black;
   --background: #F3F2EF;
 }
 
-*{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
 }
 
-body{
+body {
   background-color: var(--background) !important;
+}
+
+.text-shadow {
+  text-shadow: 0 0 5px black;
 }

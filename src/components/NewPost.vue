@@ -2,6 +2,7 @@
     import { ref, computed } from 'vue'
     import { addPost } from '../firebase/posts.js'
     import user from '../store/users.js'
+    import Swal from 'sweetalert2';
 
     const name = ref('')
     const email = ref('') 
@@ -28,11 +29,30 @@
             }
             addPost(newPost)
             message.value = ''
+            create();
         } else {
             console.log('no se puede postear algo vacio');
-            message.value = ''
+            message.value = '';
+            notCreate()
         }
         
+}
+
+const create = () => {
+    Swal.fire({
+        icon: 'success',
+        title: 'Post Created!',
+        showConfirmButton: false,
+        timer: 1500
+    })
+}
+
+const notCreate = () => {
+    Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Cannot create an empty post or less than 6 characters!'
+    })
 }
 </script>
 <template>

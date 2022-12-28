@@ -1,85 +1,94 @@
 <script setup>
-var modal = document.getElementById('id01');
+import Swal from 'sweetalert2'
+
+/* var modal = document.getElementById('id01');
 
 // cierra el modal cuando se hace click en cualquier lugar
 window.onclick = function (event) {
     if (event.target == modal) {
         modal.style.display = "none";
     }
+} */
+const donation = () => {
+    Swal.fire({
+        icon: 'success',
+        title: 'Thanks for your donation!',
+        text: 'We will be in touch soon',
+        showConfirmButton: false,
+        timer: 1500
+    })
 }
 </script>
 <template>
-    <div  id="donation">  
-           
-                    <form class="ctn mt-2 mb-5 p-2 py-3 d-flex flex-column text-center rounded">
-                        <h2>Certify delivery address</h2>
-                        <div class="input-ctn " data-validate="Name is required">
-                            <label for="name">Full Name</label>
-                            <input  type="text" id="name" placeholder="John M. Doe" required>
-                        </div>
-                        <div class="input-ctn " data-validate="Name is required">
-                            <label for="name">Email</label>
-                            <input  type="email" id="name" placeholder="john@example.com" required>
-                        </div>
-                        <div class="input-ctn " data-validate="Name is required">
-                            <label for="name">Address</label>
-                            <input  type="text" id="name" placeholder="542 W. 15th Street" required>
-                        </div>  
-                        <div class="input-ctn " data-validate="Name is required">
-                            <label for="name">City</label>
-                            <input  type="text" id="name" placeholder="New York" required>
-                        </div>  
-                        <div class="input-ctn " data-validate="Name is required">
-                            <label for="name">State</label>
-                            <input  type="text" id="name" placeholder="NY" required>
-                        </div>   
-                        <div class="input-ctn " data-validate="Name is required">
-                            <label for="name">zip</label>
-                            <input  type="number" id="name" placeholder="10001" required>
-                        </div> 
-                        <h2>Payment</h2> 
-                        <div class="input-ctn " data-validate="Name is required">
-                            <label for="name">Name on card</label>
-                            <input  type="text" id="name" placeholder="Jhon More Doe" required>
-                        </div>    
-                        <div class="input-ctn " data-validate="Name is required">
-                            <label for="name">Credit card number</label>
-                            <input  type="number" id="name" placeholder="1111-2222-3333-4444" required>
-                        </div>   
-                        <div class="input-ctn " data-validate="Name is required">
-                            <label for="name">Exp Month</label>
-                            <input  type="text" id="name" placeholder="September" required>
-                        </div>   
-                        <div class="input-ctn " data-validate="Name is required">
-                            <label for="name">Exp Year</label>
-                            <input  type="number" id="name" placeholder="2023" required>
-                        </div> 
-                        <div class="input-ctn " data-validate="Name is required">
-                            <label for="name">CVV</label>
-                            <input  type="number" id="name" placeholder="352" required>
-                        </div>                
-                                           
-                       
-                        <button class="btn btn-form"  
-                            onclick="document.getElementById('id01').style.display='block'"> Donation </button>
-                        <!-- MODAL -->
-                        <div id="id01" class="modal p-5">
-                            <span onclick="document.getElementById('id01').style.display='none'" class="close"
-                                title="Close Modal">&times;</span>
-                            <form class="modal-content " action="/action_page.php" style="background-color: #ffffff;">
-                                <div class="container">
-                                    <h1>Thanks for your donation</h1>
-                                    <p>We will be in touch soon</p>
-                                </div>
-                            </form>
-                        </div>
-                    </form>
-
-                
-          </div> 
+    <div id="donation">
+        <form class="ctn mt-2 mb-5 p-2 py-3 d-flex flex-column text-center rounded text-white">
+            <h2 class="fw-bold">Certify delivery address</h2>
+            <div class="input-ctn " data-validate="Name is required">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" placeholder="John M. Doe" required>
+            </div>
+            <div class="input-ctn " data-validate="Name is required">
+                <label for="name">Email</label>
+                <input type="email" id="name" placeholder="john@example.com" required>
+            </div>
+            <div class="input-ctn " data-validate="Name is required">
+                <label for="name">Address</label>
+                <input type="text" id="name" placeholder="542 W. 15th Street" required>
+            </div>
+            <div class="input-ctn " data-validate="Name is required">
+                <label for="name">City</label>
+                <input type="text" id="name" placeholder="New York" required>
+            </div>
+            <div class="input-ctn " data-validate="Name is required">
+                <label for="name">State</label>
+                <input type="text" id="name" placeholder="NY" required>
+            </div>
+            <div class="input-ctn " data-validate="Name is required">
+                <label for="name">zip</label>
+                <input type="number" id="name" placeholder="10001" required>
+            </div>
+            <h2 class="fw-bold mt-2">Payment</h2>
+            <div class="input-ctn " data-validate="Name is required">
+                <label for="name">Name on card</label>
+                <input type="text" id="name" placeholder="Jhon More Doe" required>
+            </div>
+            <div class="input-ctn " data-validate="Name is required">
+                <label for="name">Credit card number</label>
+                <input type="number" id="name" placeholder="1111-2222-3333-4444" required>
+            </div>
+            <div class="input-ctn " data-validate="Name is required">
+                <label for="name">Exp Month</label>
+                <input type="text" id="name" placeholder="September" required>
+            </div>
+            <div class="input-ctn " data-validate="Name is required">
+                <label for="name">Exp Year</label>
+                <input type="number" id="name" placeholder="2023" required>
+            </div>
+            <div class="input-ctn inp-center" data-validate="Name is required">
+                <label for="name">CVV</label>
+                <input type="number" id="name" placeholder="352" required>
+            </div>
 
 
-      
+            <!-- <button class="btn btn-form shadow" onclick="document.getElementById('id01').style.display='block'"> Donation
+            </button> -->
+            <button class="btn btn-form shadow" @click="donation"> Donation
+            </button>
+            <!-- MODAL -->
+            <div id="id01" class="modal p-5">
+                <span onclick="document.getElementById('id01').style.display='none'" class="close"
+                    title="Close Modal">&times;</span>
+                <form class="modal-content text-dark" action="/action_page.php" style="background-color: #ffffff;">
+                    <div class="container">
+                        <h1>Thanks for your donation</h1>
+                        <p>We will be in touch soon</p>
+                    </div>
+                </form>
+            </div>
+        </form>
+
+    </div>
+
 </template>
 <style scoped>
 #donation {
@@ -99,7 +108,9 @@ window.onclick = function (event) {
 
 
 /* lalala */
-
+h2 {
+    text-shadow: 0 0 5px black;
+}
 
 section.ctn,
 form.ctn {
@@ -152,6 +163,36 @@ form .input-ctn {
     background-color: var(--primario);
     color: white;
     box-shadow: white 0 0 5px;
+}
+
+@media screen and (min-width: 768px) {
+    form {
+        flex-direction: row !important;
+        flex-wrap: wrap;
+    }
+
+    form h2 {
+        width: 100%;
+    }
+
+    form .input-ctn {
+        flex-wrap: wrap;
+        width: 50%;
+    }
+
+    form .number {
+        width: 30% !important;
+        margin: 0 auto 15px;
+    }
+
+    form .inp-center {
+        width: 50%;
+        margin: 0 auto 20px;
+    }
+
+    .btn-form {
+        margin: 10px auto 0;
+    }
 }
 
 #fondo {

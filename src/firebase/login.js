@@ -43,4 +43,4 @@ const logout = () => {signOut(auth).then(() => {
 });
 }
 
-export {loginWithGoogle, loginWithTwitter, logout, user}
+export {loginWithGoogle, logout, user}

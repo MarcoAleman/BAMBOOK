@@ -39,6 +39,7 @@ const newMessage = () => {
                 </div>
                 <div class="col-3">
                     <button @click.prevent="newMessage" class="btn btn-success">Enviar</button>
+                    
                 </div>
             </div>
         </form>

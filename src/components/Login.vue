@@ -28,7 +28,7 @@ import { loginWithGoogle, logout } from '../firebase/login.js';
           <button class="twitter btn">
             <i class="fa fa-twitter fa-fw"></i> Login with Twitter
           </button>
-          <router-link to="/HomePosts"><button @click="loginWithGoogle" class="google btn mb-1"><i class="fa fa-google fa-fw"></i> Login with Google+</button></router-link> 
+          <router-link to="/"><button @click="loginWithGoogle" class="google btn mb-1"><i class="fa fa-google fa-fw"></i> Login with Google+</button></router-link> 
         </div>
       </div>
 

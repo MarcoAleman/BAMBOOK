@@ -12,12 +12,12 @@ const props = defineProps({
 
 <template>
     <div class="contenedor-chat">
-        <div class="d-flex align-items-center mb-2">
-            <img class="foto mt-1 " :src=chat.photo referrerpolicy="no-referrer" alt="">
-            <h2 class="text-center mt-2 mx-1">{{ chat.name }}</h2>
+        <div class="d-flex  mb-2">
+            <img class="foto p-1" :src=chat.photo referrerpolicy="no-referrer" alt="">
+            <h2 class="text-center pt-2 px-1 text-light">{{ chat.name }}</h2>
         </div>
-        <p class="mx-4 pb-2">{{ chat.message }}</p>
-        <p class="text-center">{{ chat.date }}</p>
+        <p class="mx-4 pb-2 text-light">{{ chat.message }}</p>
+        <p class="date text-white">{{new Date(chat.date).toLocaleString("en-us", { dateStyle: "short" })}}</p>
     </div>
 
 </template>
@@ -26,8 +26,8 @@ const props = defineProps({
 
 .contenedor-chat{
     width: 15rem;
-    background: var(--primario);
-    border-radius: 1.5rem;
+    background: #202C33;
+    border-radius: .7rem;
 
 }
 .foto {
@@ -37,5 +37,11 @@ const props = defineProps({
 }
 h2{
     font-size: 1rem;
+}
+.date{
+    font-size: 11px;
+    position: absolute;
+    margin-top: 1.7rem;
+    margin-left: 2.3rem;
 }
 </style>

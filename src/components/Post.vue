@@ -43,11 +43,12 @@ import { ref, computed } from 'vue';
             </ul>
         </div>
             <img class="imgPerfil" referrerpolicy="no-referrer" :src="post.photo? post.photo : 'https://media.istockphoto.com/id/1332100919/vector/man-icon-black-icon-person-symbol.jpg?s=612x612&w=0&k=20&c=AVVJkvxQQCuBhawHrUhDRTCeNQ3Jgt0K1tXjJsFy1eg='" />
-            <router-link to="/UserView"><button class="btn"
-                @click="recibirEmail(post.email)"><h3 class="nomUser">{{post.name}}</h3></button></router-link>
-            
+            <div class="d-flex"> 
+                <router-link to="/UserView"><button class="btn" @click="recibirEmail(post.email)"><h3 class="nomUser">{{post.name}}</h3></button></router-link>
+                <p class="date">{{new Date(post.date).toLocaleString("en-us", { dateStyle: "short" })}}</p>
+            </div>
         </div>
-        <p class="post p-2">{{post.message}}</p>
+        <p class="post p-4">{{post.message}}</p>
         <div class= "d-flex align-items-center">
             <div class="botones mx-2">
                 <font-awesome-icon class="like" icon="fa-solid fa-heart" /> 
@@ -64,12 +65,19 @@ import { ref, computed } from 'vue';
                 <p class="p text-dark">3</p>
             </div>
             <!-- <span class="text-white text-sm">{{post.share.length}}</span -->
-        </div>
+                
+            </div>
         <NewComment :postId="post.id"/>
         <CommentContainer  :postId="post.id"/>
     </div>    
 </template>
 <style scoped>
+.date{
+    font-size: 11px;
+    position: absolute;
+    margin-top: 2.2rem;
+    margin-left: .7rem;
+}
     .boton-contenedor{
         position: absolute;
         right: 0;
@@ -94,7 +102,6 @@ import { ref, computed } from 'vue';
 
     }
     .nomUser{
-        margin-top: .3rem;
         font-size: 1.2rem;
     }
     .postContenedor{
@@ -108,7 +115,7 @@ import { ref, computed } from 'vue';
         border-bottom: 1px solid var(--primario);
     }
     .like, .share, .comment{
-        height: 1.3rem;
+        height: 1.1rem;
         color: white;
         padding: .4rem;
     }

@@ -1,6 +1,7 @@
 <script setup>
- import user from '../store/users.js'
- import {logout} from '../firebase/login.js'
+import user from '../store/users.js'
+import {logout} from '../firebase/login.js'
+
 </script>
 
 <template>
@@ -46,18 +47,18 @@
           </div>
           <div class="offcanvas-body">
             <nav class="p-3 d-flex flex-column justify-content-center align-item-center gap-4">
-                <li data-bs-dismiss="offcanvas"><RouterLink to="/HomePosts" id="offcanva">Home</RouterLink></li>
-                <li data-bs-dismiss="offcanvas"><RouterLink to="Users" id="offcanva">Users</RouterLink></li>
-                <li data-bs-dismiss="offcanvas"><RouterLink to="/market" id="offcanva">Marketplace</RouterLink></li>
-                <li data-bs-dismiss="offcanvas"><RouterLink to="/AboutUs" id="offcanva">About Us</RouterLink></li>
-                <li data-bs-dismiss="offcanvas"><RouterLink to="/Eventos" id="offcanva">Events</RouterLink></li>
-                <li data-bs-dismiss="offcanvas"><RouterLink to="/Donation" id="offcanva">Donation</RouterLink></li>
-                <li data-bs-dismiss="offcanvas"><RouterLink to="/RulesAndPolice" id="offcanva">Rules and Polices</RouterLink></li>
+              <li data-bs-dismiss="offcanvas"><RouterLink to="/HomePosts" id="offcanva">Home</RouterLink></li>
+              <li data-bs-dismiss="offcanvas"><RouterLink to="Users" id="offcanva">Users</RouterLink></li>
+              <li data-bs-dismiss="offcanvas"><RouterLink to="/market" id="offcanva">Marketplace</RouterLink></li>
+              <li data-bs-dismiss="offcanvas"><RouterLink to="/AboutUs" id="offcanva">About Us</RouterLink></li>
+              <li data-bs-dismiss="offcanvas"><RouterLink to="/Eventos" id="offcanva">Events</RouterLink></li>
+              <li data-bs-dismiss="offcanvas"><RouterLink to="/Donation" id="offcanva">Donation</RouterLink></li>
+              <li data-bs-dismiss="offcanvas"><RouterLink to="/RulesAndPolice" id="offcanva">Rules and Polices</RouterLink></li>
             </nav>
             <div class="d-flex align-items-center justify-content-center">
-
               <button v-if="user" class="btn btn-danger" @click="logout">Logout</button>
             </div>
+
           </div>
         </div>
       </div>

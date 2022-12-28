@@ -100,8 +100,8 @@ window.onclick = function (event) {
     background-size: cover;
     background-position: center;
     height:83%;
-background-image:url('../assets/img/fondo.jpg');
-background-size:cover;
-background-attachment: fixed;
-}
+    background-image:url('../assets/img/fondo.jpg');
+    background-size:cover;
+    background-attachment: fixed;
+    }
 </style>

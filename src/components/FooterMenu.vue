@@ -29,7 +29,7 @@ import user from '../store/users.js'
         width: 100%;
         background-color: black;
         position: fixed;
-        bottom: 0;
+        bottom: -0;
     }
     .optionFooter{
         display: flex;

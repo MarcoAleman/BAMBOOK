@@ -38,7 +38,7 @@ const loginWithGoogle = async () => {
 
 const loginWithTwitter = async () => {
   console.log('click');
-    signInWithPopup(auth, provider)
+    signInWithPopup(auth, twitterProvider)
       .then(async(result) => {
         console.log('resultados', result)
         /* let newUser = {

@@ -31,7 +31,7 @@ const newMessage = () => {
         <div class="col-12 p-2 ">
             <MensajesVue v-for="chat in chats" :chat="chat" key="chat.id" />
         </div>
-        <form class="mb-3 submit">
+        <form class="mb-3 submit ">
             <div class="d-flex">
                 <div class="col-9">
                     <input type="text" v-model="texto" class="form-control" id="textoprueba"

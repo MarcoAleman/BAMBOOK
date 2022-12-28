@@ -23,6 +23,7 @@ const getPosts = () =>{
             }
             posts.value.push(post)
         })
+        posts.value.sort((o1, o2) => o2.date - o1.date)
     })
 }
 

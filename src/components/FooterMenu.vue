@@ -30,12 +30,10 @@ import user from '../store/users.js'
         background-color: black;
         position: fixed;
         bottom: 0;
-        
     }
     .optionFooter{
         display: flex;
         width: 100%;
         justify-content: space-around;
-
     }
 </style>

@@ -27,7 +27,8 @@
         }
         addPost(newPost)
         message.value = ''
-    }
+        
+}
 </script>
 <template>
     {{updateData}}

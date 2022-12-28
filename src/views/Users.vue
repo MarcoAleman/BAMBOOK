@@ -11,7 +11,7 @@ onMounted(() => getUsers())
 <template>
 
     <body id="fondo">
-        <h1 class="text-dark text-center">UserList</h1>
+        <h1 class="text-white fw-bold text-shadow text-center">UserList</h1>
         <userItemVue v-for="user in userList" :userL="user" :key="user.id" />
     </body>
 </template>

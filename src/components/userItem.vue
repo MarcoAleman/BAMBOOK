@@ -21,15 +21,15 @@ const props = defineProps({
 
 </script>
 <template>
-    <div class="d-flex contenedor-todo align-items-center mb-5">
+    <div class="d-flex contenedor-todo align-items-center justify-content-center mb-5 text-white">
         <div class="d-flex div-contenedor pt-2">
             <img class="imgPerfil" :src=userL.photo referrerpolicy="no-referrer" />
-            <p class="text-dark nombre">{{ userL.name }}</p>
+            <p class="nombre text-shadow">{{ userL.name }}</p>
         </div>
         <div class="d-flex  contenedor-botones-2">
             <router-link to="/UserView"><button class="btn btn-success button" @click="recibirEmail(userL.email)">View
                     Profile</button></router-link>
-            <router-link to="/Pruebainput" @click="recibirEmail(userL.email)"><button class="btn btn-danger button">Message</button></router-link>
+            <router-link to="/Pruebainput" @click="recibirEmail(userL.email)"><button class="btn btn-danger button h-100">Message</button></router-link>
         </div>
     </div>
 </template>
@@ -38,6 +38,7 @@ const props = defineProps({
     height: 4rem;
     border-bottom: 1px var(--primario) solid;
     padding: 5px;
+    background: rgba(0, 255, 64, 0.1);
 }
 
 .nombre {

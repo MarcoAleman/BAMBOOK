@@ -32,14 +32,13 @@ const newMessage = () => {
             <MensajesVue v-for="chat in chats" :chat="chat" key="chat.id" />
         </div>
         <form class="mb-3 submit ">
-            <div class="d-flex">
-                <div class="col-9">
+            <div class="d-flex enviar-inbt">
+                <div class="inp">
                     <input type="text" v-model="texto" class="form-control" id="textoprueba"
                         placeholder="Ingrese su mensaje">
                 </div>
-                <div class="col-3">
+                <div class="btnn">
                     <button @click.prevent="newMessage" class="btn btn-success">Enviar</button>
-                    
                 </div>
             </div>
         </form>
@@ -47,5 +46,13 @@ const newMessage = () => {
 </template>
 
 <style scoped>
-
+.enviar-inbt{
+    position: fixed;
+    bottom: 0;
+    margin-bottom: 3.4rem;
+    width: 100%;
+}
+.inp, .btnn{
+    padding-left: 1rem;
+}
 </style>
